@@ -817,8 +817,8 @@ or the singular form of the mapped variable.
     end
     ```
 
-* Prefer `map` over `collect`, `find` over `detect`, `select` over
-  `find_all`, `reduce` over `inject` and `size` over `length`.
+* Prefer `map` over `collect`, `reduce` over `inject`, `detect` over `find`, `select` over
+  `find_all`, and `size` over `length`.
 
 * Use `flat_map` instead of `map` + `flatten`.
   This does not apply for arrays with a depth greater than 2, i.e.
