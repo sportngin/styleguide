@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Ruby
-header: Ruby Styleguide
+header: Ruby Style Guide
 group: navigation
 ---
 {% include JB/setup %}

@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Styleguide
+title: Style Guide
 ---
 {% include JB/setup %}
 
-## Styleguide styleguide
+## Style Guide style guide
 
-* Always place a table of contents at the top of the styleguide.
+* Always place a table of contents at the top of the style guide.
 
-* Each section should start with an second-level header (`##`).
+* Each section should start with a second-level header (`##`).
 
 * Each rule should be a list item `*` in an un-ordered list.
 
@@ -19,9 +19,9 @@ title: Styleguide
 * When referencing methods/operators in the rule description, escape like `this`.
 
 
-## How to use this styleguide in pull requests
+## How to use this style guide in pull requests
 
-Hovering over a styleguide rule should bring up the <i class="icon-map-marker"></i> icon.
+Hovering over a style guide rule should bring up the <i class="icon-map-marker"></i> icon.
 Click this icon to set the page url to the section you want to quote.
 
 Copy the url and paste it in a line-level comment on the offending pull request.
