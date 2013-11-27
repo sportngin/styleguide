@@ -235,12 +235,15 @@ Failing that, follow [Kernighan & Ritchie C style](http://en.wikipedia.org/wiki/
 
 * `NSString`, `NSDictionary`, `NSArray`, and `NSNumber` literals should be used whenever creating immutable instances of those objects. Pay special attention to prevent `nil` values from being passed into `NSArray` and `NSDictionary` literals, as this will cause a crash.
 * Spaces belong between the braces of array and dictionary literals and their contents; between each member of the collection; and between keys, colons, and values of a dictionary literal.
+* Spaces belong between the braces of a subscripted array and the index when the index is a variable.
 * Long or complex array and dictionary literals may be broken into several lines.
 
     ```objc
     // bad
     NSString *greeting = [NSString stringWithUTF8String:"hello"];
     NSArray *names = [NSArray arrayWithObjects:@"Joe", @"Mark", @"Michael", @"Mike", @"Shivani", nil];
+    NSInteger indexOfShivani = 4;
+    NSString *shivani = names[indexOfShivani];
     NSDictionary *appOwners = [NSDictionary dictionaryWithObjectsAndKeys: @"Mike", @"iScout", @"Michael", @"Scorekeeper", @"Mark", @"Tournament", nil];
     NSNumber *shouldUseLiterals = [NSNumber numberWithBool:YES];
     NSNumber *buildingZIPCode = [NSNumber numberWithInteger:55413];
@@ -248,6 +251,8 @@ Failing that, follow [Kernighan & Ritchie C style](http://en.wikipedia.org/wiki/
     // good
     NSString *greeting = @"Hello";
     NSArray *names = @[ @"Joe", @"Mark", @"Michael", @"Mike", @"Shivani" ];
+    NSInteger indexOfShivani = 4;
+    NSString *shivani = names[ indexOfShivani ];
     NSDictionary *productManagers = @{ @"iScout" : @"Mike",
                                        @"Scorekeeper" : @"Michael",
                                        @"Tournament" : @"Mark" };
@@ -308,7 +313,7 @@ Failing that, follow [Kernighan & Ritchie C style](http://en.wikipedia.org/wiki/
 
 * Use the `NS_ENUM()` macro to define `enum`s.
 * Each enumerated value should begin with the type name.
-* The first value should be 1 unless it represents some sort of "false" state, in which case 0 is appropriate.
+* The first value should be 1, unless it represents some sort of "false" state, or if the values represent array indexes, in which case 0 is appropriate.
 
     ```objc
     typedef NS_ENUM(NSInteger, PeriodType) {
