@@ -700,6 +700,24 @@ modules). Never use `::` for method invocation.
     do_something if (1000...2000).include?(x)
     ```
 
+* Prefer the `->` operator over `lambda` for creating Procs
+
+    ```ruby
+    # bad
+    be_awesome = lambda {|word| puts "#{word} is awesome!" }
+
+    # good
+    be_awesome = ->(word) { puts "#{word} is awesome!" }
+
+* Never put a space between `->` and the leading parenthesis for it's parameters
+
+    ```ruby
+    # bad
+    print_something = -> (something) { puts something }
+
+    # good
+    print_something = ->(something) { puts something }
+
 ## Naming
 
 * Name identifiers in English.
