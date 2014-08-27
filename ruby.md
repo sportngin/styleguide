@@ -351,8 +351,8 @@ modules). Never use `::` for method invocation.
     ```
 
 
-* The `and` and `or` keywords are banned. It's just not worth
-  it. Always use `&&` and `||` instead.
+* Always use `&&` and `||` instead of `and` or `or` for logical
+  expressions. Use `and` and `or` for control flow.
 
     ```ruby
     # bad
@@ -362,7 +362,7 @@ modules). Never use `::` for method invocation.
     end
 
     # control flow
-    document.saved? or document.save!
+    document.saved? || document.save!
 
     # good
     # boolean expression
@@ -371,13 +371,15 @@ modules). Never use `::` for method invocation.
     end
 
     # control flow
-    document.saved? || document.save!
+    document.saved? or document.save!
+
+    document.save and document.shipit
     ```
 
 * Do not use multi-line `?:` (the ternary operator); use `if/unless` instead.
 
 * Favor modifier `if/unless/while/until` usage when you have a single-line
-  body. Another good alternative is the usage of control flow `&&/||`.
+  body. Another good alternative is the usage of control flow `and/or`
 
     ```ruby
     # bad
@@ -389,7 +391,7 @@ modules). Never use `::` for method invocation.
     do_something if some_condition
 
     # another good option
-    some_condition && do_something
+    some_condition and do_something
 
     # bad
     while some_condition
@@ -401,7 +403,7 @@ modules). Never use `::` for method invocation.
     ```
 
 * Favor `unless` over `if` for negative conditions (or control
-  flow `||`). Also Favor `until` over `while` for negative conditions.
+  flow `or`) Also Favor `until` over `while` for negative conditions.
 
     ```ruby
     # bad
@@ -414,7 +416,7 @@ modules). Never use `::` for method invocation.
     do_something unless some_condition
 
     # another good option
-    some_condition || do_something
+    some_condition or do_something
 
     # bad
     do_something while !some_condition
