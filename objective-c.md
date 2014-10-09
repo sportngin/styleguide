@@ -31,6 +31,7 @@ Failing that, follow [Kernighan & Ritchie C style](http://en.wikipedia.org/wiki/
 * [Common Method Structures](#common-method-structures)
 * [Miscellany](#miscellany)
 * [Xcode Project](#xcode-project)
+* [Segue Naming](#segue-naming)
 
 ## Organization
 * Use `#pragma mark`s to categorize methods into functional groupings and protocol implementations, following this general structure:
@@ -396,3 +397,30 @@ Failing that, follow [Kernighan & Ritchie C style](http://en.wikipedia.org/wiki/
       * `Strings/` (contains plists for localized strings)
    * `Supporting Files/` (AppDelegate, InfoPlist, Images.xcassets, ProjectName-Info.plist, ProjectName-Prefix.pch)
 * When possible, always turn on "Treat Warnings as Errors" in the target's Build Settings and enable as many [additional warnings](http://boredzo.org/blog/archives/2009-11-07/warnings) as possible. If you need to ignore a specific warning, use [Clang's pragma feature](http://clang.llvm.org/docs/UsersManual.html#controlling-diagnostics-via-pragmas).
+
+## Segue Naming
+
+* Segue Naming - segue names (the class or in the case of unwind the method) should indicate what they do, the segue ID should indicate where it is used in the storyboard
+    * Presentation Segue - re-used throughout the storyboard
+        * Start with what the segue does (eg. “NonAnimated”, “Flip")
+        * End with “Segue”
+        * Example: a non animated segue from controller a to controller b = “NonAnimatedSegue"
+    * Unwind Segue - re-used throughout a scene
+        * Start with “Unwind”
+        * Followed by name of the destination controller (sans the “ViewController" part of the name)
+        * End with “Segue”
+        * Example: an unwind seque from an instance of AuthenticationViewController back to an instance of LoginViewController = "UnwindLoginSegue"
+* Segue ID Naming (only necessary if you are doing a segue from code or you linked the segue to the controller to be called on dismissing the controller)
+    * Presentation Segue ID - specific to an instance of the segue
+        * Start with the source controller name  (sans the “ViewController" part of the name)
+        * Followed by the word “To”
+        * Followed by the destination controller name  (sans the “ViewController" part of the name)
+        * End with “SegueId”
+        * Example: a non animated segue from LoginViewController to AuthenticationViewController = “LoginToAuthenticationSegueId”
+    * Unwind Segue ID - specific to an instance of the segue
+        * Start with the word “Unwind”
+        * Followed by the source controller name  (sans the “ViewController" part of the name)
+        * Followed by the word “To”
+        * Followed by the destination controller name  (sans the “ViewController" part of the name)
+        * End with “SegueId”
+        * Example: an unwind segue from AuthenticationViewController to LoginViewController = “AuthenticationToLoginSegueId”
