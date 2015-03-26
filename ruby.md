@@ -1427,7 +1427,7 @@ Apply this rule only to arrays with two or more elements.
     puts "$global = #{$global}"
     ```
 
-* Don't pass herdoc strings to methods. Use a temporary variable.
+* Don't pass heredoc strings to methods. Use a temporary variable.
 
     ```ruby
     # bad
