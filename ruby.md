@@ -15,7 +15,8 @@ Much of this was taken from https://github.com/bbatsov/ruby-style-guide and http
 * [Naming](#naming)
 * [Comments](#comments)
 * [Comment Annotations](#comment-annotations)
-* [Classes](#classes--modules)
+* [Classes & Modules](#classes--modules)
+* [Private & Protected Methods](#private--protected-methods)
 * [Exceptions](#exceptions)
 * [Collections](#collections)
 * [Strings](#strings)
@@ -939,16 +940,12 @@ at all.
       def some_method
       end
 
-      # protected and private methods are grouped near the end
-
-
-      def some_protected_method
+      # private methods are grouped near the end
+      private def some_private_method
       end
-      protected :some_protected_method
 
-      def some_private_method
+      private def another_private_method
       end
-      private :some_private_method
     end
     ```
 
@@ -1061,48 +1058,6 @@ in inheritance.
     Parent.print_class_var # => will print "child"
     ```
 
-* Assign proper visibility levels to methods (`private`, `protected`)
-in accordance with their intended usage. Don't go off leaving
-everything `public` (which is the default).
-
-* Pass the method name to `public`, `protected`, and `private` methods one line below the visibility controlled method
-
-    ```ruby
-    #bad
-    class SomeClass
-      def public_method
-        # ...
-      end
-
-      private
-
-      def private_method
-        # ...
-      end
-
-      def another_private_method
-        # ...
-      end
-    end
-
-    #good
-    class SomeClass
-      def public_method
-        # ...
-      end
-
-      def private_method
-        # ...
-      end
-      private :private_method
-
-      def another_private_method
-        # ...
-      end
-      private :private_method
-    end
-    ```
-
 * Avoid class << self except when necessary, e.g. single accessors and aliased attributes.
 
     ```ruby
@@ -1130,6 +1085,99 @@ everything `public` (which is the default).
 
       def self.second_method_etc
         # body omitted
+      end
+    end
+    ```
+
+## Private & Protected Methods
+
+* Avoid using `protected` whenever possible.
+
+* Assign proper visibility levels to methods (`public` or `private`)
+in accordance with their intended usage. Don't go off leaving
+everything `public` (which is the default).
+
+* **For applications/gems with Ruby >= 2.1**, use `private def method_name`.
+
+  ```ruby
+    # good
+    class SomeClass
+      def public_method
+        # ...
+      end
+
+      private def private_method
+        # ...
+      end
+
+      private def another_private_method
+        # ...
+      end
+    end
+  ```
+
+* **For applications with Ruby < 2.1 and gems still supporting Ruby < 2.1**, use
+  `private :method_name` _or_ `private`, depending on the existing convention in place.
+
+* Using `private :method_name`, pass the method name to public, or private one line
+    below the visibility controlled method.
+
+    ```ruby
+    # ok
+    class SomeClass
+      def public_method
+        # ...
+      end
+
+      def private_method
+        # ...
+      end
+      private :private_method
+
+      def another_private_method
+        # ...
+      end
+      private :private_method
+    end
+    ```
+
+* For `private` blocks, indent the `private` methods as much as the method
+    definitions they apply to. Leave one blank line above the visibility modifier
+    and one blank line below in order to emphasize that it applies to all methods
+    below it.  
+
+    ```ruby
+    # bad - private methods are indented too far
+    class SomeClass
+      def public_method
+        # ...
+      end
+
+      private
+
+        def private_method
+          # ...
+        end
+
+        def another_private_method
+          # ...
+        end
+    end
+
+    # ok
+    class SomeClass
+      def public_method
+        # ...
+      end
+
+      private
+
+      def private_method
+        # ...
+      end
+
+      def another_private_method
+        # ...
       end
     end
     ```
