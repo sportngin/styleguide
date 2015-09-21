@@ -120,14 +120,15 @@
 </li><li id='table-of-contents_L3'><a class='reference' href='#table-of-contents_L3'><i class='icon-map-marker'></i></a><a href="#naming">Naming</a>
 </li><li id='table-of-contents_L4'><a class='reference' href='#table-of-contents_L4'><i class='icon-map-marker'></i></a><a href="#comments">Comments</a>
 </li><li id='table-of-contents_L5'><a class='reference' href='#table-of-contents_L5'><i class='icon-map-marker'></i></a><a href="#comment-annotations">Comment Annotations</a>
-</li><li id='table-of-contents_L6'><a class='reference' href='#table-of-contents_L6'><i class='icon-map-marker'></i></a><a href="#classes--modules">Classes</a>
-</li><li id='table-of-contents_L7'><a class='reference' href='#table-of-contents_L7'><i class='icon-map-marker'></i></a><a href="#exceptions">Exceptions</a>
-</li><li id='table-of-contents_L8'><a class='reference' href='#table-of-contents_L8'><i class='icon-map-marker'></i></a><a href="#collections">Collections</a>
-</li><li id='table-of-contents_L9'><a class='reference' href='#table-of-contents_L9'><i class='icon-map-marker'></i></a><a href="#strings">Strings</a>
-</li><li id='table-of-contents_L10'><a class='reference' href='#table-of-contents_L10'><i class='icon-map-marker'></i></a><a href="#regular-expressions">Regular Expressions</a>
-</li><li id='table-of-contents_L11'><a class='reference' href='#table-of-contents_L11'><i class='icon-map-marker'></i></a><a href="#percent-literals">Percent Literals</a>
-</li><li id='table-of-contents_L12'><a class='reference' href='#table-of-contents_L12'><i class='icon-map-marker'></i></a><a href="#misc">Misc</a>
-</li><li id='table-of-contents_L13'><a class='reference' href='#table-of-contents_L13'><i class='icon-map-marker'></i></a><a href="#never-ever">Never Ever</a>
+</li><li id='table-of-contents_L6'><a class='reference' href='#table-of-contents_L6'><i class='icon-map-marker'></i></a><a href="#classes--modules">Classes &amp; Modules</a>
+</li><li id='table-of-contents_L7'><a class='reference' href='#table-of-contents_L7'><i class='icon-map-marker'></i></a><a href="#private--protected-methods">Private &amp; Protected Methods</a>
+</li><li id='table-of-contents_L8'><a class='reference' href='#table-of-contents_L8'><i class='icon-map-marker'></i></a><a href="#exceptions">Exceptions</a>
+</li><li id='table-of-contents_L9'><a class='reference' href='#table-of-contents_L9'><i class='icon-map-marker'></i></a><a href="#collections">Collections</a>
+</li><li id='table-of-contents_L10'><a class='reference' href='#table-of-contents_L10'><i class='icon-map-marker'></i></a><a href="#strings">Strings</a>
+</li><li id='table-of-contents_L11'><a class='reference' href='#table-of-contents_L11'><i class='icon-map-marker'></i></a><a href="#regular-expressions">Regular Expressions</a>
+</li><li id='table-of-contents_L12'><a class='reference' href='#table-of-contents_L12'><i class='icon-map-marker'></i></a><a href="#percent-literals">Percent Literals</a>
+</li><li id='table-of-contents_L13'><a class='reference' href='#table-of-contents_L13'><i class='icon-map-marker'></i></a><a href="#misc">Misc</a>
+</li><li id='table-of-contents_L14'><a class='reference' href='#table-of-contents_L14'><i class='icon-map-marker'></i></a><a href="#never-ever">Never Ever</a>
 </li></ul>
 <h2 id='source-code-layout'><a class='reference' href='#source-code-layout'><i class='icon-map-marker'></i></a>Source Code Layout</h2>
 <ul>
@@ -822,15 +823,12 @@ sure to document them in your project&#39;s <code>README</code> or similar.</p>
   <span class="k">def</span> <span class="nf">some_method</span>
   <span class="k">end</span>
 
-  <span class="c1"># protected and private methods are grouped near the end</span>
-
-  <span class="k">def</span> <span class="nf">some_protected_method</span>
+  <span class="c1"># private methods are grouped near the end</span>
+  <span class="kp">private</span> <span class="k">def</span> <span class="nf">some_private_method</span>
   <span class="k">end</span>
-  <span class="kp">protected</span> <span class="ss">:some_protected_method</span>
 
-  <span class="k">def</span> <span class="nf">some_private_method</span>
+  <span class="kp">private</span> <span class="k">def</span> <span class="nf">another_private_method</span>
   <span class="k">end</span>
-  <span class="kp">private</span> <span class="ss">:some_private_method</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='classes--modules_L2'><a class='reference' href='#classes--modules_L2'><i class='icon-map-marker'></i></a><p>Prefer modules to classes with only class methods. Classes should be
 used only when it makes sense to create instances out of them.</p>
@@ -924,44 +922,7 @@ in inheritance.</p>
 <span class="k">end</span>
 
 <span class="no">Parent</span><span class="o">.</span><span class="n">print_class_var</span> <span class="c1"># =&gt; will print &quot;child&quot;</span>
-</code></pre></div></li><li id='classes--modules_L6'><a class='reference' href='#classes--modules_L6'><i class='icon-map-marker'></i></a><p>Assign proper visibility levels to methods (<code>private</code>, <code>protected</code>)
-in accordance with their intended usage. Don&#39;t go off leaving
-everything <code>public</code> (which is the default).</p>
-</li><li id='classes--modules_L7'><a class='reference' href='#classes--modules_L7'><i class='icon-map-marker'></i></a><p>Pass the method name to <code>public</code>, <code>protected</code>, and <code>private</code> methods one line below the visibility controlled method</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1">#bad</span>
-<span class="k">class</span> <span class="nc">SomeClass</span>
-  <span class="k">def</span> <span class="nf">public_method</span>
-    <span class="c1"># ...</span>
-  <span class="k">end</span>
-
-  <span class="kp">private</span>
-
-  <span class="k">def</span> <span class="nf">private_method</span>
-    <span class="c1"># ...</span>
-  <span class="k">end</span>
-
-  <span class="k">def</span> <span class="nf">another_private_method</span>
-    <span class="c1"># ...</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-
-<span class="c1">#good</span>
-<span class="k">class</span> <span class="nc">SomeClass</span>
-  <span class="k">def</span> <span class="nf">public_method</span>
-    <span class="c1"># ...</span>
-  <span class="k">end</span>
-
-  <span class="k">def</span> <span class="nf">private_method</span>
-    <span class="c1"># ...</span>
-  <span class="k">end</span>
-  <span class="kp">private</span> <span class="ss">:private_method</span>
-
-  <span class="k">def</span> <span class="nf">another_private_method</span>
-    <span class="c1"># ...</span>
-  <span class="k">end</span>
-  <span class="kp">private</span> <span class="ss">:private_method</span>
-<span class="k">end</span>
-</code></pre></div></li><li id='classes--modules_L8'><a class='reference' href='#classes--modules_L8'><i class='icon-map-marker'></i></a><p>Avoid class &lt;&lt; self except when necessary, e.g. single accessors and aliased attributes.</p>
+</code></pre></div></li><li id='classes--modules_L6'><a class='reference' href='#classes--modules_L6'><i class='icon-map-marker'></i></a><p>Avoid class &lt;&lt; self except when necessary, e.g. single accessors and aliased attributes.</p>
 <div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">TestClass</span>
   <span class="c1"># bad</span>
   <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
@@ -986,6 +947,85 @@ everything <code>public</code> (which is the default).</p>
 
   <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">second_method_etc</span>
     <span class="c1"># body omitted</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></li></ul>
+<h2 id='private--protected-methods'><a class='reference' href='#private--protected-methods'><i class='icon-map-marker'></i></a>Private &amp; Protected Methods</h2>
+<ul>
+<li id='private--protected-methods_L1'><a class='reference' href='#private--protected-methods_L1'><i class='icon-map-marker'></i></a><p>Avoid using <code>protected</code> whenever possible.</p>
+</li><li id='private--protected-methods_L2'><a class='reference' href='#private--protected-methods_L2'><i class='icon-map-marker'></i></a><p>Assign proper visibility levels to methods (<code>public</code> or <code>private</code>)
+in accordance with their intended usage. Don&#39;t go off leaving
+everything <code>public</code> (which is the default).</p>
+</li><li id='private--protected-methods_L3'><a class='reference' href='#private--protected-methods_L3'><i class='icon-map-marker'></i></a><p><strong>For applications/gems with Ruby &gt;= 2.1</strong>, use <code>private def method_name</code>.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># good</span>
+<span class="k">class</span> <span class="nc">SomeClass</span>
+  <span class="k">def</span> <span class="nf">public_method</span>
+    <span class="c1"># ...</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span> <span class="k">def</span> <span class="nf">private_method</span>
+    <span class="c1"># ...</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span> <span class="k">def</span> <span class="nf">another_private_method</span>
+    <span class="c1"># ...</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></li><li id='private--protected-methods_L4'><a class='reference' href='#private--protected-methods_L4'><i class='icon-map-marker'></i></a><p><strong>For applications with Ruby &lt; 2.1 and gems still supporting Ruby &lt; 2.1</strong>, use
+<code>private :method_name</code> <em>or</em> <code>private</code>, depending on the existing convention in place.</p>
+</li><li id='private--protected-methods_L5'><a class='reference' href='#private--protected-methods_L5'><i class='icon-map-marker'></i></a><p>Using <code>private :method_name</code>, pass the method name to public, or private one line
+below the visibility controlled method.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># ok</span>
+<span class="k">class</span> <span class="nc">SomeClass</span>
+  <span class="k">def</span> <span class="nf">public_method</span>
+    <span class="c1"># ...</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">private_method</span>
+    <span class="c1"># ...</span>
+  <span class="k">end</span>
+  <span class="kp">private</span> <span class="ss">:private_method</span>
+
+  <span class="k">def</span> <span class="nf">another_private_method</span>
+    <span class="c1"># ...</span>
+  <span class="k">end</span>
+  <span class="kp">private</span> <span class="ss">:private_method</span>
+<span class="k">end</span>
+</code></pre></div></li><li id='private--protected-methods_L6'><a class='reference' href='#private--protected-methods_L6'><i class='icon-map-marker'></i></a><p>For <code>private</code> blocks, indent the <code>private</code> methods as much as the method
+definitions they apply to. Leave one blank line above the visibility modifier
+and one blank line below in order to emphasize that it applies to all methods
+below it.  </p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad - private methods are indented too far</span>
+<span class="k">class</span> <span class="nc">SomeClass</span>
+  <span class="k">def</span> <span class="nf">public_method</span>
+    <span class="c1"># ...</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+
+    <span class="k">def</span> <span class="nf">private_method</span>
+      <span class="c1"># ...</span>
+    <span class="k">end</span>
+
+    <span class="k">def</span> <span class="nf">another_private_method</span>
+      <span class="c1"># ...</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="c1"># ok</span>
+<span class="k">class</span> <span class="nc">SomeClass</span>
+  <span class="k">def</span> <span class="nf">public_method</span>
+    <span class="c1"># ...</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+
+  <span class="k">def</span> <span class="nf">private_method</span>
+    <span class="c1"># ...</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">another_private_method</span>
+    <span class="c1"># ...</span>
   <span class="k">end</span>
 <span class="k">end</span>
 </code></pre></div></li></ul>
@@ -1203,7 +1243,7 @@ interpolated into a string.</p>
 
 <span class="c1"># good</span>
 <span class="nb">puts</span> <span class="s2">&quot;$global = </span><span class="si">#{</span><span class="vg">$global</span><span class="si">}</span><span class="s2">&quot;</span>
-</code></pre></div></li><li id='strings_L4'><a class='reference' href='#strings_L4'><i class='icon-map-marker'></i></a><p>Don&#39;t pass herdoc strings to methods. Use a temporary variable.</p>
+</code></pre></div></li><li id='strings_L4'><a class='reference' href='#strings_L4'><i class='icon-map-marker'></i></a><p>Don&#39;t pass heredoc strings to methods. Use a temporary variable.</p>
 <div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
 <span class="n">execute</span><span class="p">(</span><span class="o">&lt;&lt;-</span><span class="no">QUERY</span><span class="p">)</span>
 <span class="sh">  UPDATE users SET username = &quot;Bob&quot; WHERE id=1;</span>

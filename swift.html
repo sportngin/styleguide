@@ -130,8 +130,10 @@ Cocoa</a> and <a href="https://developer.apple.com/library/ios/documentation/Swi
 </li><li id='table-of-contents_L10'><a class='reference' href='#table-of-contents_L10'><i class='icon-map-marker'></i></a><a href="#optionals">Optionals</a>
 </li><li id='table-of-contents_L11'><a class='reference' href='#table-of-contents_L11'><i class='icon-map-marker'></i></a><a href="#booleans">Booleans</a>
 </li><li id='table-of-contents_L12'><a class='reference' href='#table-of-contents_L12'><i class='icon-map-marker'></i></a><a href="#enumerated-types">Enumerated Types</a>
-</li><li id='table-of-contents_L13'><a class='reference' href='#table-of-contents_L13'><i class='icon-map-marker'></i></a><a href="#miscellany">Miscellany</a>
-</li><li id='table-of-contents_L14'><a class='reference' href='#table-of-contents_L14'><i class='icon-map-marker'></i></a><a href="#xcode-project">Xcode Project</a>
+</li><li id='table-of-contents_L13'><a class='reference' href='#table-of-contents_L13'><i class='icon-map-marker'></i></a><a href="#methods">Methods</a>
+</li><li id='table-of-contents_L14'><a class='reference' href='#table-of-contents_L14'><i class='icon-map-marker'></i></a><a href="#singletons">Singletons</a>
+</li><li id='table-of-contents_L15'><a class='reference' href='#table-of-contents_L15'><i class='icon-map-marker'></i></a><a href="#miscellany">Miscellany</a>
+</li><li id='table-of-contents_L16'><a class='reference' href='#table-of-contents_L16'><i class='icon-map-marker'></i></a><a href="#xcode-project">Xcode Project</a>
 </li></ul>
 <h2 id='organization'><a class='reference' href='#organization'><i class='icon-map-marker'></i></a>Organization</h2>
 <ul>
@@ -417,6 +419,55 @@ struct Car: Vehicle {
 </code></pre></div>
 <p>Rationale: Value types are simpler, easier to reason about, and behave as expected with the let keyword.</p>
 </li></ul>
+<h2 id='methods'><a class='reference' href='#methods'><i class='icon-map-marker'></i></a>Methods</h2>
+<ul>
+<li id='methods_L1'><a class='reference' href='#methods_L1'><i class='icon-map-marker'></i></a><p>We want a method to be named concisely but need enough information to know parameters.</p>
+</li><li id='methods_L2'><a class='reference' href='#methods_L2'><i class='icon-map-marker'></i></a><p>We could name it very simply:</p>
+</li></ul>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">  darkBackground(frame: CGRect) // We don&#39;t know the parameters easily.
+</code></pre></div>
+<ul>
+<li id='methods_L3'><a class='reference' href='#methods_L3'><i class='icon-map-marker'></i></a>We could name it similar to objective-C style:
+</li></ul>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">  darkBackgroundForRect:(frame: CGRect) // This is overly wordy.
+</code></pre></div>
+<ul>
+<li id='methods_L4'><a class='reference' href='#methods_L4'><i class='icon-map-marker'></i></a>We prefer to name it as follows:
+</li></ul>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">  darkBackground(#frame: CGRect) // Autocomplete will prompt us for the parameter
+</code></pre></div><h2 id='singletons'><a class='reference' href='#singletons'><i class='icon-map-marker'></i></a>Singletons</h2>
+<p>The pattern should use &#39;let&#39; and create an accessor:
+```
+private let sharedInstance = Analytics()</p>
+
+<p>public class Analytics {</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">/// The shared instance of the Logger class
+class private var instance: Analytics {
+    return sharedInstance
+}
+</code></pre></div>
+<p>}
+```</p>
+
+<p>Additionally if you need to trigger an init() method and want to stay with class methods (vs referencing an instance externally) do the following:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">private let sharedInstance = Analytics()
+public class Analytics {
+   private init() {  }
+   private var tracker: GAITracker? {
+        return  GAI.sharedInstance().defaultTracker
+   }
+   public class var analyticsTracker: GAITracker? {
+        return  instance.tracker
+   }
+   public class func menuOpen(menuName: String) {
+       if let tracker = Analytics.analyticsTracker { }
+    }
+  class var instance: Analytics {
+    return sharedInstance
+  }
+}
+</code></pre></div>
+<p>The call to Analytics.menuOpen(&quot;mymenu&quot;) from outside this method will call the &#39;analyticsTracker&#39; which in turn will will use &#39;instance&#39; to get the &#39;sharedInstance&#39; which will cause the init() method to execute.</p>
 <h2 id='miscellany'><a class='reference' href='#miscellany'><i class='icon-map-marker'></i></a>Miscellany</h2>
 <ul>
 <li id='miscellany_L4'><a class='reference' href='#miscellany_L4'><i class='icon-map-marker'></i></a>Don&#39;t commit code that will never execute; just delete it. You probably won&#39;t ever want it back, and if you do, you&#39;ll likely want to rewrite it anyway. And you can always retrieve it from an earlier commit if you have to. This applies to:
