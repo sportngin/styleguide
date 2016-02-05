@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Style Guide</title>
+    <title>Angular</title>
     
     <meta name="author" content="Sport Ngin">
 
@@ -53,7 +53,7 @@
     
       
       	
-      	<li><a href="http://sportngin.github.io/styleguide/angular.html">Angular</a></li>
+      	<li class="active"><a href="http://sportngin.github.io/styleguide/angular.html" class="active">Angular</a></li>
       	
       
     
@@ -115,25 +115,33 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>Style Guide </h1>
+  <h1>Angular </h1>
 </div>
 
 <div class="row-fluid">
   <div class="span12">
-    <h2 id='style-guide-style-guide'><a class='reference' href='#style-guide-style-guide'><i class='icon-map-marker'></i></a>Style Guide style guide</h2>
-<ul>
-<li id='style-guide-style-guide_L1'><a class='reference' href='#style-guide-style-guide_L1'><i class='icon-map-marker'></i></a><p>Always place a table of contents at the top of the style guide.</p>
-</li><li id='style-guide-style-guide_L2'><a class='reference' href='#style-guide-style-guide_L2'><i class='icon-map-marker'></i></a><p>Each section should start with a second-level header (<code>##</code>).</p>
-</li><li id='style-guide-style-guide_L3'><a class='reference' href='#style-guide-style-guide_L3'><i class='icon-map-marker'></i></a><p>Each rule should be a list item <code>*</code> in an un-ordered list.</p>
-</li><li id='style-guide-style-guide_L4'><a class='reference' href='#style-guide-style-guide_L4'><i class='icon-map-marker'></i></a><p>Indent code block examples 4 spaces to make them fall inside the list item.</p>
-</li><li id='style-guide-style-guide_L5'><a class='reference' href='#style-guide-style-guide_L5'><i class='icon-map-marker'></i></a><p>All code block examples should have code-level comments marking good/bad examples.</p>
-</li><li id='style-guide-style-guide_L6'><a class='reference' href='#style-guide-style-guide_L6'><i class='icon-map-marker'></i></a><p>When referencing methods/operators in the rule description, escape like <code>this</code>.</p>
-</li></ul>
-<h2 id='how-to-use-this-style-guide-in-pull-requests'><a class='reference' href='#how-to-use-this-style-guide-in-pull-requests'><i class='icon-map-marker'></i></a>How to use this style guide in pull requests</h2>
-<p>Hovering over a style guide rule should bring up the <i class="icon-map-marker"></i> icon.
-Click this icon to set the page url to the section you want to quote.</p>
-
-<p>Copy the url and paste it in a line-level comment on the offending pull request.</p>
+    <p>This is a list of style choices and idioms we wish to apply when using AngularJs.</p>
+<h2 id='access-to-parent-scope'><a class='reference' href='#access-to-parent-scope'><i class='icon-map-marker'></i></a>Access to Parent Scope</h2>
+<p>When a parameter is assigned in a template, it will sometimes need explicit access to the parent scope due to new child scopes being created by the parent elements in the template. For example:</p>
+<div class="highlight"><pre><code class="html language-html" data-lang="html">  <span class="nt">&lt;directive</span><span class="na">-element</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">ng-if=</span><span class="s">&quot;cond&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;form</span> <span class="na">name=</span><span class="s">&quot;formName&quot;</span><span class="nt">&gt;</span>
+        ...
+      <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="err">&lt;</span>/directive-element&gt;
+</code></pre></div>
+<p>This will fail to give access to <code>formName</code> in the <code>directiveElement</code> controller. To expose the parent scope to the child directive we can do the following:</p>
+<h4 id='<em>directiveelement.js</em>'><a class='reference' href='#<em>directiveelement.js</em>'><i class='icon-map-marker'></i></a><em>directiveElement.js</em></h4><div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript">  <span class="nx">$scope</span><span class="p">.</span><span class="nx">scope</span> <span class="o">=</span> <span class="nx">$scope</span>
+</code></pre></div><h4 id='<em>directiveelement.html</em>'><a class='reference' href='#<em>directiveelement.html</em>'><i class='icon-map-marker'></i></a><em>directiveElement.html</em></h4><div class="highlight"><pre><code class="html language-html" data-lang="html">  <span class="nt">&lt;directive</span><span class="na">-element</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">ng-if=</span><span class="s">&quot;cond&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;form</span> <span class="na">name=</span><span class="s">&quot;scope.formName&quot;</span><span class="nt">&gt;</span>
+        ...
+      <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="err">&lt;</span>/directive-element&gt;
+</code></pre></div>
+<p>This naming convention for form elements is fully supported by Angular, and allows us to explicitly define which scope object the new element should be stored on.</p>
 
   </div>
 </div>
