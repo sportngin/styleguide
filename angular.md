@@ -8,9 +8,9 @@ group: navigation
 
 This is a list of style choices and idioms we wish to apply when using AngularJs.
 
-## Acces to Parent Scope
+## Access to Parent Scope
 
-When a parameter is assigned in a template, it will sometimes need acess to the parent scope:
+When a parameter is assigned in a template, it will sometimes need explicit access to the parent scope due to new child scopes being created by the parent elements in the template. For example:
 
 ```html
   <directive-element>
@@ -42,3 +42,4 @@ This will fail to give access to `formName` in the `directiveElement` controller
   </directive-element>
 ```
 
+This naming convention for form elements is fully supported by Angular, and allows us to explicitly define which scope object the new element should be stored on.
