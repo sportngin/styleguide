@@ -301,5 +301,47 @@ single letter name in the scope of a very small function probably isn't a big de
       'color2'
   ]
   ```
+  
+## Revealing Module Pattern
+  
+* Revealing module pattern provides a great way of explicitly defining an api for an object. The enclosing function
+  provides a closure for state, but the object return provides interface. This pattern is frequently used in our
+  Angular applications.  This is a good practice when developing your javascript objects. 
+    
+  ```javascript
+  function revealMeAnObject() { 
+      var somePrivateThingy = 'private'
+      var somePublicThingy = 'public'
+      
+      return {
+        somePublicThingy: somePublicThingy,
+        somePublicMethod: function(){
+          console.log("called a public method")
+        }
+      }
+  }
+  ```
+  
+* While the above example is revealing module pattern, it can suffer from a bloated return object where there is
+  too much implementation logic within the object and it makes your API hard to discern. You can refactor this method
+  using named functions instead of anonymous functions. What you end up with is a tight object block that defines
+  your interface.
+     
+  ```javascript
+  function revealMeAnObject() { 
+    var somePrivateThingy = 'private'
+    var somePublicThingy = 'public'
+      
+    function myInternalMethod(){
+      console.log("called a public method")
+    }
+      
+    return {
+      somePublicThingy: somePublicThingy,
+      somePublicMethod: myInternalMethod
+    }
+  }
+  ```
+
 
 
