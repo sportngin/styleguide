@@ -196,21 +196,13 @@ Much of this was taken from https://github.com/bbatsov/ruby-style-guide and http
     ```
 
 
-* Align the parameters of a method call if they span more than one line.
+* Align multi-line parameters with one indent at the level of the method callee. Each parameter and the closing
+  parenthesis should be on their own line
 
     ```ruby
     # starting point (line is too long)
     def send_mail(source)
       Mailer.deliver(to: 'bob@example.com', from: 'us@example.com', subject: 'Important message', body: source.text)
-    end
-
-    # bad (normal indent)
-    def send_mail(source)
-      Mailer.deliver(
-        to: 'bob@example.com',
-        from: 'us@example.com',
-        subject: 'Important message',
-        body: source.text)
     end
 
     # bad (double indent)
@@ -219,15 +211,28 @@ Much of this was taken from https://github.com/bbatsov/ruby-style-guide and http
           to: 'bob@example.com',
           from: 'us@example.com',
           subject: 'Important message',
-          body: source.text)
+          body: source.text
+      )
     end
 
-    # good
+    # good (normal indent aligned to callee)
     def send_mail(source)
-      Mailer.deliver(to: 'bob@example.com',
-                     from: 'us@example.com',
-                     subject: 'Important message',
-                     body: source.text)
+      Mailer.deliver(
+        to: 'bob@example.com',
+        from: 'us@example.com',
+        subject: 'Important message',
+        body: source.text
+      )
+    end
+
+    # good (normal indent aligned to callee)
+    def send_mail(source)
+      mail = Mailer.deliver(
+               to: 'bob@example.com',
+               from: 'us@example.com',
+               subject: 'Important message',
+               body: source.text
+             )
     end
     ```
 
