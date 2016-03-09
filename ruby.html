@@ -255,19 +255,11 @@ line continuations at all.</p>
 <span class="c1"># good - it&#39;s immediately clear what&#39;s going on the second line</span>
 <span class="n">one</span><span class="o">.</span><span class="n">two</span><span class="o">.</span><span class="n">three</span>
   <span class="o">.</span><span class="n">four</span>
-</code></pre></div></li><li id='source-code-layout_L15'><a class='reference' href='#source-code-layout_L15'><i class='icon-map-marker'></i></a><p>Align the parameters of a method call if they span more than one line.</p>
+</code></pre></div></li><li id='source-code-layout_L15'><a class='reference' href='#source-code-layout_L15'><i class='icon-map-marker'></i></a><p>Align multi-line parameters with one indent at the level of the method callee. Each parameter and the closing
+parenthesis should be on their own line</p>
 <div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># starting point (line is too long)</span>
 <span class="k">def</span> <span class="nf">send_mail</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
   <span class="no">Mailer</span><span class="o">.</span><span class="n">deliver</span><span class="p">(</span><span class="ss">to</span><span class="p">:</span> <span class="s1">&#39;bob@example.com&#39;</span><span class="p">,</span> <span class="ss">from</span><span class="p">:</span> <span class="s1">&#39;us@example.com&#39;</span><span class="p">,</span> <span class="ss">subject</span><span class="p">:</span> <span class="s1">&#39;Important message&#39;</span><span class="p">,</span> <span class="ss">body</span><span class="p">:</span> <span class="n">source</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
-<span class="k">end</span>
-
-<span class="c1"># bad (normal indent)</span>
-<span class="k">def</span> <span class="nf">send_mail</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
-  <span class="no">Mailer</span><span class="o">.</span><span class="n">deliver</span><span class="p">(</span>
-    <span class="ss">to</span><span class="p">:</span> <span class="s1">&#39;bob@example.com&#39;</span><span class="p">,</span>
-    <span class="ss">from</span><span class="p">:</span> <span class="s1">&#39;us@example.com&#39;</span><span class="p">,</span>
-    <span class="ss">subject</span><span class="p">:</span> <span class="s1">&#39;Important message&#39;</span><span class="p">,</span>
-    <span class="ss">body</span><span class="p">:</span> <span class="n">source</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 <span class="k">end</span>
 
 <span class="c1"># bad (double indent)</span>
@@ -276,15 +268,28 @@ line continuations at all.</p>
       <span class="ss">to</span><span class="p">:</span> <span class="s1">&#39;bob@example.com&#39;</span><span class="p">,</span>
       <span class="ss">from</span><span class="p">:</span> <span class="s1">&#39;us@example.com&#39;</span><span class="p">,</span>
       <span class="ss">subject</span><span class="p">:</span> <span class="s1">&#39;Important message&#39;</span><span class="p">,</span>
-      <span class="ss">body</span><span class="p">:</span> <span class="n">source</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+      <span class="ss">body</span><span class="p">:</span> <span class="n">source</span><span class="o">.</span><span class="n">text</span>
+  <span class="p">)</span>
 <span class="k">end</span>
 
-<span class="c1"># good</span>
+<span class="c1"># good (normal indent aligned to callee)</span>
 <span class="k">def</span> <span class="nf">send_mail</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
-  <span class="no">Mailer</span><span class="o">.</span><span class="n">deliver</span><span class="p">(</span><span class="ss">to</span><span class="p">:</span> <span class="s1">&#39;bob@example.com&#39;</span><span class="p">,</span>
-                 <span class="ss">from</span><span class="p">:</span> <span class="s1">&#39;us@example.com&#39;</span><span class="p">,</span>
-                 <span class="ss">subject</span><span class="p">:</span> <span class="s1">&#39;Important message&#39;</span><span class="p">,</span>
-                 <span class="ss">body</span><span class="p">:</span> <span class="n">source</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+  <span class="no">Mailer</span><span class="o">.</span><span class="n">deliver</span><span class="p">(</span>
+    <span class="ss">to</span><span class="p">:</span> <span class="s1">&#39;bob@example.com&#39;</span><span class="p">,</span>
+    <span class="ss">from</span><span class="p">:</span> <span class="s1">&#39;us@example.com&#39;</span><span class="p">,</span>
+    <span class="ss">subject</span><span class="p">:</span> <span class="s1">&#39;Important message&#39;</span><span class="p">,</span>
+    <span class="ss">body</span><span class="p">:</span> <span class="n">source</span><span class="o">.</span><span class="n">text</span>
+  <span class="p">)</span>
+<span class="k">end</span>
+
+<span class="c1"># good (normal indent aligned to callee)</span>
+<span class="k">def</span> <span class="nf">send_mail</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+  <span class="n">mail</span> <span class="o">=</span> <span class="no">Mailer</span><span class="o">.</span><span class="n">deliver</span><span class="p">(</span>
+           <span class="ss">to</span><span class="p">:</span> <span class="s1">&#39;bob@example.com&#39;</span><span class="p">,</span>
+           <span class="ss">from</span><span class="p">:</span> <span class="s1">&#39;us@example.com&#39;</span><span class="p">,</span>
+           <span class="ss">subject</span><span class="p">:</span> <span class="s1">&#39;Important message&#39;</span><span class="p">,</span>
+           <span class="ss">body</span><span class="p">:</span> <span class="n">source</span><span class="o">.</span><span class="n">text</span>
+         <span class="p">)</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='source-code-layout_L16'><a class='reference' href='#source-code-layout_L16'><i class='icon-map-marker'></i></a><p>Add underscores to large numeric literals to improve their readability.</p>
 <div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad - how many 0s are there?</span>
