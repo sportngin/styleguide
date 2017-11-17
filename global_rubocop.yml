@@ -1,2 +1,26 @@
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 50
+
 Style/Alias:
   EnforcedStyle: prefer_alias_method
+
+Metrics/ModuleLength:
+  Max: 200
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
