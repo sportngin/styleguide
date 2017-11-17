@@ -24,3 +24,6 @@ Metrics/ModuleLength:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
