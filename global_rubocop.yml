@@ -27,3 +27,6 @@ Style/FrozenStringLiteralComment:
 
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
+
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline
