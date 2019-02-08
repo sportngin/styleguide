@@ -30,3 +30,10 @@ Layout/MultilineOperationIndentation:
 
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
+
+Rails/UnknownEnv:
+  Environments:
+    - development
+    - test
+    - production
+    - staging
