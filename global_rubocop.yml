@@ -3,6 +3,8 @@ Metrics/ClassLength:
 
 Metrics/LineLength:
   Max: 120
+  Exclude:
+    - 'spec/**/*'
 
 Metrics/MethodLength:
   Max: 25
