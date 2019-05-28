@@ -16,9 +16,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/css/github.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//css/github.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -34,7 +34,7 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
-          <a class="brand" href="http://sportngin.github.io/styleguide">Sport Ngin Style Guide</a>
+          <a class="brand" href="http://sportngin.github.io/styleguide">SportsEngine Style Guide</a>
           <ul class="nav">
             
             
@@ -45,7 +45,7 @@
     
       
       	
-      	<li><a href="http://sportngin.github.io/styleguide/android.html">Android</a></li>
+      	<li><a href="http://sportngin.github.io/styleguide/android">Android</a></li>
       	
       
     
@@ -53,35 +53,7 @@
     
       
       	
-      	<li class="active"><a href="http://sportngin.github.io/styleguide/angular.html" class="active">Angular</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="http://sportngin.github.io/styleguide/javascript.html">JavaScript</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="http://sportngin.github.io/styleguide/objective-c.html">Objective-C</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="http://sportngin.github.io/styleguide/ruby.html">Ruby</a></li>
+      	<li class="active"><a href="http://sportngin.github.io/styleguide/angular" class="active">Angular</a></li>
       	
       
     
@@ -93,7 +65,35 @@
     
       
       	
-      	<li><a href="http://sportngin.github.io/styleguide/swift.html">Swift</a></li>
+      	<li><a href="http://sportngin.github.io/styleguide/javascript">JavaScript</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="http://sportngin.github.io/styleguide/objective-c">Objective-C</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="http://sportngin.github.io/styleguide/ruby">Ruby</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="http://sportngin.github.io/styleguide/swift">Swift</a></li>
       	
       
     
@@ -123,23 +123,23 @@
     <p>This is a list of style choices and idioms we wish to apply when using AngularJs.</p>
 <h2 id='access-to-parent-scope'><a class='reference' href='#access-to-parent-scope'><i class='icon-map-marker'></i></a>Access to Parent Scope</h2>
 <p>When a parameter is assigned in a template, it will sometimes need explicit access to the parent scope due to new child scopes being created by the parent elements in the template. For example:</p>
-<div class="highlight"><pre><code class="html language-html" data-lang="html">  <span class="nt">&lt;directive</span><span class="na">-element</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">ng-if=</span><span class="s">&quot;cond&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;form</span> <span class="na">name=</span><span class="s">&quot;formName&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span></span>  <span class="p">&lt;</span><span class="nt">directive-element</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">ng-if</span><span class="o">=</span><span class="s">&quot;cond&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;formName&quot;</span><span class="p">&gt;</span>
         ...
-      <span class="nt">&lt;/form&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="err">&lt;</span>/directive-element&gt;
+      <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">directive-element</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>This will fail to give access to <code>formName</code> in the <code>directiveElement</code> controller. To expose the parent scope to the child directive we can do the following:</p>
-<h4 id='<em>directiveelement.js</em>'><a class='reference' href='#<em>directiveelement.js</em>'><i class='icon-map-marker'></i></a><em>directiveElement.js</em></h4><div class="highlight"><pre><code class="javascript language-javascript" data-lang="javascript">  <span class="nx">$scope</span><span class="p">.</span><span class="nx">scope</span> <span class="o">=</span> <span class="nx">$scope</span>
-</code></pre></div><h4 id='<em>directiveelement.html</em>'><a class='reference' href='#<em>directiveelement.html</em>'><i class='icon-map-marker'></i></a><em>directiveElement.html</em></h4><div class="highlight"><pre><code class="html language-html" data-lang="html">  <span class="nt">&lt;directive</span><span class="na">-element</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">ng-if=</span><span class="s">&quot;cond&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;form</span> <span class="na">name=</span><span class="s">&quot;scope.formName&quot;</span><span class="nt">&gt;</span>
+<h4 id='<em>directiveelement.js</em>'><a class='reference' href='#<em>directiveelement.js</em>'><i class='icon-map-marker'></i></a><em>directiveElement.js</em></h4><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span></span>  <span class="nx">$scope</span><span class="p">.</span><span class="nx">scope</span> <span class="o">=</span> <span class="nx">$scope</span>
+</code></pre></div><h4 id='<em>directiveelement.html</em>'><a class='reference' href='#<em>directiveelement.html</em>'><i class='icon-map-marker'></i></a><em>directiveElement.html</em></h4><div class="highlight"><pre><code class="language-html" data-lang="html"><span></span>  <span class="p">&lt;</span><span class="nt">directive-element</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">ng-if</span><span class="o">=</span><span class="s">&quot;cond&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;scope.formName&quot;</span><span class="p">&gt;</span>
         ...
-      <span class="nt">&lt;/form&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="err">&lt;</span>/directive-element&gt;
+      <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">directive-element</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>This naming convention for form elements is fully supported by Angular, and allows us to explicitly define which scope object the new element should be stored on.</p>
 
@@ -155,6 +155,7 @@
     </div>
 
     
+
   </body>
 </html>
 

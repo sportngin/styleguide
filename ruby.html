@@ -16,9 +16,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/css/github.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//css/github.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -34,7 +34,7 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
-          <a class="brand" href="http://sportngin.github.io/styleguide">Sport Ngin Style Guide</a>
+          <a class="brand" href="http://sportngin.github.io/styleguide">SportsEngine Style Guide</a>
           <ul class="nav">
             
             
@@ -45,7 +45,7 @@
     
       
       	
-      	<li><a href="http://sportngin.github.io/styleguide/android.html">Android</a></li>
+      	<li><a href="http://sportngin.github.io/styleguide/android">Android</a></li>
       	
       
     
@@ -53,35 +53,7 @@
     
       
       	
-      	<li><a href="http://sportngin.github.io/styleguide/angular.html">Angular</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="http://sportngin.github.io/styleguide/javascript.html">JavaScript</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="http://sportngin.github.io/styleguide/objective-c.html">Objective-C</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li class="active"><a href="http://sportngin.github.io/styleguide/ruby.html" class="active">Ruby</a></li>
+      	<li><a href="http://sportngin.github.io/styleguide/angular">Angular</a></li>
       	
       
     
@@ -93,7 +65,35 @@
     
       
       	
-      	<li><a href="http://sportngin.github.io/styleguide/swift.html">Swift</a></li>
+      	<li><a href="http://sportngin.github.io/styleguide/javascript">JavaScript</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="http://sportngin.github.io/styleguide/objective-c">Objective-C</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="http://sportngin.github.io/styleguide/ruby" class="active">Ruby</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="http://sportngin.github.io/styleguide/swift">Swift</a></li>
       	
       
     
@@ -142,7 +142,7 @@
 <ul>
 <li id='source-code-layout_L1'><a class='reference' href='#source-code-layout_L1'><i class='icon-map-marker'></i></a><p>Use <code>UTF-8</code> as the source file encoding.</p>
 </li><li id='source-code-layout_L2'><a class='reference' href='#source-code-layout_L2'><i class='icon-map-marker'></i></a><p>Use two <strong>spaces</strong> per indentation level. No hard tabs.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad - four spaces</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad - four spaces</span>
 <span class="k">def</span> <span class="nf">some_method</span>
     <span class="n">do_something</span>
 <span class="k">end</span>
@@ -152,7 +152,7 @@
   <span class="n">do_something</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='source-code-layout_L3'><a class='reference' href='#source-code-layout_L3'><i class='icon-map-marker'></i></a><p>Avoid single-line methods.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">def</span> <span class="nf">too_much</span><span class="p">;</span> <span class="n">something</span><span class="p">;</span> <span class="n">something_else</span><span class="p">;</span> <span class="k">end</span>
 
 <span class="c1"># okish - notice that the first ; is required</span>
@@ -169,34 +169,34 @@
   <span class="n">body</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='source-code-layout_L4'><a class='reference' href='#source-code-layout_L4'><i class='icon-map-marker'></i></a><p>One exception to the rule are empty-body methods.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># good</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># good</span>
 <span class="k">def</span> <span class="nf">no_op</span><span class="p">;</span> <span class="k">end</span>
 </code></pre></div></li><li id='source-code-layout_L5'><a class='reference' href='#source-code-layout_L5'><i class='icon-map-marker'></i></a><p>Use spaces around operators, after commas, colons and semicolons, around <code>{</code>
 and before <code>}</code>. Whitespace might be (mostly) irrelevant to the Ruby
 interpreter, but its proper use is the key to writing easily
 readable code.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">sum</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="n">sum</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
 <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
 <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="o">?</span> <span class="kp">true</span> <span class="p">:</span> <span class="kp">false</span><span class="p">;</span> <span class="nb">puts</span> <span class="s1">&#39;Hi&#39;</span>
 <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">].</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">e</span> <span class="p">}</span>
 </code></pre></div></li><li id='source-code-layout_L6'><a class='reference' href='#source-code-layout_L6'><i class='icon-map-marker'></i></a><p>The only exceptions, are the exponent operator and string interpolation:</p>
 </li><li id='source-code-layout_L7'><a class='reference' href='#source-code-layout_L7'><i class='icon-map-marker'></i></a><p>The exponent operator should have no spaces around it.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">e</span> <span class="o">=</span> <span class="n">M</span> <span class="o">*</span> <span class="n">c</span> <span class="o">**</span> <span class="mi">2</span>
 
 <span class="c1"># good</span>
 <span class="n">e</span> <span class="o">=</span> <span class="n">M</span> <span class="o">*</span> <span class="n">c</span><span class="o">**</span><span class="mi">2</span>
 </code></pre></div></li><li id='source-code-layout_L8'><a class='reference' href='#source-code-layout_L8'><i class='icon-map-marker'></i></a><p>String interpolation should have no spaces after <code>#{</code> or before <code>}</code>.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="s2">&quot;string</span><span class="si">#{</span> <span class="n">expr</span> <span class="si">}</span><span class="s2">&quot;</span>
 
 <span class="c1"># good - no spaces</span>
 <span class="s2">&quot;string</span><span class="si">#{</span><span class="n">expr</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div></li><li id='source-code-layout_L9'><a class='reference' href='#source-code-layout_L9'><i class='icon-map-marker'></i></a><p>No spaces after <code>(</code>, <code>[</code> or before <code>]</code>, <code>)</code>.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">some</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="o">.</span><span class="n">other</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="n">some</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="o">.</span><span class="n">other</span>
 <span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">].</span><span class="n">length</span>
 </code></pre></div></li><li id='source-code-layout_L10'><a class='reference' href='#source-code-layout_L10'><i class='icon-map-marker'></i></a><p>Indent <code>when</code> as deep as <code>case</code>.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">case</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">case</span>
 <span class="k">when</span> <span class="n">song</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;Misty&#39;</span>
   <span class="nb">puts</span> <span class="s1">&#39;Not again!&#39;</span>
 <span class="k">when</span> <span class="n">song</span><span class="o">.</span><span class="n">duration</span> <span class="o">&gt;</span> <span class="mi">120</span>
@@ -208,16 +208,16 @@ readable code.</p>
 <span class="k">end</span>
 
 <span class="n">kind</span> <span class="o">=</span> <span class="k">case</span> <span class="n">year</span>
-       <span class="k">when</span> <span class="mi">1850</span><span class="o">.</span><span class="n">.</span><span class="mi">1889</span> <span class="k">then</span> <span class="s1">&#39;Blues&#39;</span>
-       <span class="k">when</span> <span class="mi">1890</span><span class="o">.</span><span class="n">.</span><span class="mi">1909</span> <span class="k">then</span> <span class="s1">&#39;Ragtime&#39;</span>
-       <span class="k">when</span> <span class="mi">1910</span><span class="o">.</span><span class="n">.</span><span class="mi">1929</span> <span class="k">then</span> <span class="s1">&#39;New Orleans Jazz&#39;</span>
-       <span class="k">when</span> <span class="mi">1930</span><span class="o">.</span><span class="n">.</span><span class="mi">1939</span> <span class="k">then</span> <span class="s1">&#39;Swing&#39;</span>
-       <span class="k">when</span> <span class="mi">1940</span><span class="o">.</span><span class="n">.</span><span class="mi">1950</span> <span class="k">then</span> <span class="s1">&#39;Bebop&#39;</span>
+       <span class="k">when</span> <span class="mi">1850</span><span class="o">..</span><span class="mi">1889</span> <span class="k">then</span> <span class="s1">&#39;Blues&#39;</span>
+       <span class="k">when</span> <span class="mi">1890</span><span class="o">..</span><span class="mi">1909</span> <span class="k">then</span> <span class="s1">&#39;Ragtime&#39;</span>
+       <span class="k">when</span> <span class="mi">1910</span><span class="o">..</span><span class="mi">1929</span> <span class="k">then</span> <span class="s1">&#39;New Orleans Jazz&#39;</span>
+       <span class="k">when</span> <span class="mi">1930</span><span class="o">..</span><span class="mi">1939</span> <span class="k">then</span> <span class="s1">&#39;Swing&#39;</span>
+       <span class="k">when</span> <span class="mi">1940</span><span class="o">..</span><span class="mi">1950</span> <span class="k">then</span> <span class="s1">&#39;Bebop&#39;</span>
        <span class="k">else</span> <span class="s1">&#39;Jazz&#39;</span>
        <span class="k">end</span>
 </code></pre></div></li><li id='source-code-layout_L11'><a class='reference' href='#source-code-layout_L11'><i class='icon-map-marker'></i></a><p>Use empty lines between <code>def</code>s and to break up a method into logical
 paragraphs.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">some_method</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">def</span> <span class="nf">some_method</span>
   <span class="n">data</span> <span class="o">=</span> <span class="kp">initialize</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
 
   <span class="n">data</span><span class="o">.</span><span class="n">manipulate!</span>
@@ -229,7 +229,7 @@ paragraphs.</p>
   <span class="n">result</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='source-code-layout_L12'><a class='reference' href='#source-code-layout_L12'><i class='icon-map-marker'></i></a><p>Don&#39;t use spaces around the <code>=</code> operator when assigning default values to method parameters:</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">def</span> <span class="nf">some_method</span><span class="p">(</span><span class="n">arg1</span> <span class="o">=</span> <span class="ss">:default</span><span class="p">,</span> <span class="n">arg2</span> <span class="o">=</span> <span class="kp">nil</span><span class="p">,</span> <span class="n">arg3</span> <span class="o">=</span> <span class="o">[]</span><span class="p">)</span>
   <span class="c1"># do something...</span>
 <span class="k">end</span>
@@ -240,7 +240,7 @@ paragraphs.</p>
 <span class="k">end</span>
 </code></pre></div></li><li id='source-code-layout_L13'><a class='reference' href='#source-code-layout_L13'><i class='icon-map-marker'></i></a><p>Avoid line continuation <code>\</code> where not required. In practice, avoid using
 line continuations at all.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">\</span>
          <span class="mi">2</span>
 
@@ -248,7 +248,7 @@ line continuations at all.</p>
 <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">\</span>
          <span class="o">-</span> <span class="mi">2</span>
 </code></pre></div></li><li id='source-code-layout_L14'><a class='reference' href='#source-code-layout_L14'><i class='icon-map-marker'></i></a><p>When continuing a chained method invocation on another line keep the <code>.</code> on the second line.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad - need to consult first line to understand second line</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad - need to consult first line to understand second line</span>
 <span class="n">one</span><span class="o">.</span><span class="n">two</span><span class="o">.</span><span class="n">three</span><span class="o">.</span>
   <span class="n">four</span>
 
@@ -257,7 +257,7 @@ line continuations at all.</p>
   <span class="o">.</span><span class="n">four</span>
 </code></pre></div></li><li id='source-code-layout_L15'><a class='reference' href='#source-code-layout_L15'><i class='icon-map-marker'></i></a><p>Align multi-line parameters with one indent at the level of the method callee. Each parameter and the closing
 parenthesis should be on their own line</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># starting point (line is too long)</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># starting point (line is too long)</span>
 <span class="k">def</span> <span class="nf">send_mail</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
   <span class="no">Mailer</span><span class="o">.</span><span class="n">deliver</span><span class="p">(</span><span class="ss">to</span><span class="p">:</span> <span class="s1">&#39;bob@example.com&#39;</span><span class="p">,</span> <span class="ss">from</span><span class="p">:</span> <span class="s1">&#39;us@example.com&#39;</span><span class="p">,</span> <span class="ss">subject</span><span class="p">:</span> <span class="s1">&#39;Important message&#39;</span><span class="p">,</span> <span class="ss">body</span><span class="p">:</span> <span class="n">source</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 <span class="k">end</span>
@@ -292,7 +292,7 @@ parenthesis should be on their own line</p>
          <span class="p">)</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='source-code-layout_L16'><a class='reference' href='#source-code-layout_L16'><i class='icon-map-marker'></i></a><p>Add underscores to large numeric literals to improve their readability.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad - how many 0s are there?</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad - how many 0s are there?</span>
 <span class="n">num</span> <span class="o">=</span> <span class="mi">1000000</span>
 
 <span class="c1"># good - much easier to parse for the human brain</span>
@@ -300,7 +300,7 @@ parenthesis should be on their own line</p>
 </code></pre></div></li><li id='source-code-layout_L17'><a class='reference' href='#source-code-layout_L17'><i class='icon-map-marker'></i></a><p>Limit lines to 120 characters.</p>
 </li><li id='source-code-layout_L18'><a class='reference' href='#source-code-layout_L18'><i class='icon-map-marker'></i></a><p>Remove all trailing whitespace.</p>
 </li><li id='source-code-layout_L19'><a class='reference' href='#source-code-layout_L19'><i class='icon-map-marker'></i></a><p>Don&#39;t use block comments. They cannot be preceded by whitespace and are not as easy to spot as regular comments.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="o">==</span> <span class="k">begin</span>
 <span class="n">comment</span> <span class="n">line</span>
 <span class="n">another</span> <span class="n">comment</span> <span class="n">line</span>
@@ -315,17 +315,17 @@ parenthesis should be on their own line</p>
 <ul>
 <li id='syntax_L1'><a class='reference' href='#syntax_L1'><i class='icon-map-marker'></i></a><p>Use <code>::</code> only to reference constants(this includes classes and
 modules). Never use <code>::</code> for method invocation.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
-<span class="ss">SomeClass</span><span class="p">:</span><span class="ss">:some_method</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
+<span class="no">SomeClass</span><span class="o">::</span><span class="n">some_method</span>
 <span class="n">some_object</span><span class="o">::</span><span class="n">some_method</span>
 
 <span class="c1"># good</span>
 <span class="no">SomeClass</span><span class="o">.</span><span class="n">some_method</span>
 <span class="n">some_object</span><span class="o">.</span><span class="n">some_method</span>
-<span class="ss">SomeModule</span><span class="p">:</span><span class="ss">:SomeClass</span><span class="o">::</span><span class="no">SOME_CONST</span>
+<span class="no">SomeModule</span><span class="o">::</span><span class="no">SomeClass</span><span class="o">::</span><span class="no">SOME_CONST</span>
 </code></pre></div></li><li id='syntax_L2'><a class='reference' href='#syntax_L2'><i class='icon-map-marker'></i></a><p>Use <code>def</code> with parentheses when there are arguments. Omit the
 parentheses when the method doesn&#39;t accept any arguments.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">def</span> <span class="nf">some_method</span><span class="p">()</span>
  <span class="c1"># body omitted</span>
 <span class="k">end</span>
@@ -345,7 +345,7 @@ parentheses when the method doesn&#39;t accept any arguments.</p>
  <span class="c1"># body omitted</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='syntax_L3'><a class='reference' href='#syntax_L3'><i class='icon-map-marker'></i></a><p>Never use <code>then</code> for multi-line <code>if/unless</code>.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">if</span> <span class="n">some_condition</span> <span class="k">then</span>
   <span class="c1"># body omitted</span>
 <span class="k">end</span>
@@ -355,7 +355,7 @@ parentheses when the method doesn&#39;t accept any arguments.</p>
   <span class="c1"># body omitted</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='syntax_L4'><a class='reference' href='#syntax_L4'><i class='icon-map-marker'></i></a><p>Favor the ternary operator(<code>?:</code>) over <code>if/then/else/end</code> constructs</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">result</span> <span class="o">=</span> <span class="k">if</span> <span class="n">some_condition</span> <span class="k">then</span> <span class="n">something</span> <span class="k">else</span> <span class="n">something_else</span> <span class="k">end</span>
 
 <span class="c1"># good</span>
@@ -363,7 +363,7 @@ parentheses when the method doesn&#39;t accept any arguments.</p>
 </code></pre></div></li><li id='syntax_L5'><a class='reference' href='#syntax_L5'><i class='icon-map-marker'></i></a><p>Use one expression per branch in a ternary operator. This
 also means that ternary operators must not be nested. Prefer
 <code>if/else</code> constructs in these cases.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">some_condition</span> <span class="p">?</span> <span class="p">(</span><span class="n">nested_condition</span> <span class="p">?</span> <span class="n">nested_something</span> <span class="p">:</span> <span class="n">nested_something_else</span><span class="p">)</span> <span class="p">:</span> <span class="n">something_else</span>
 
 <span class="c1"># good</span>
@@ -373,14 +373,14 @@ also means that ternary operators must not be nested. Prefer
   <span class="n">something_else</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='syntax_L6'><a class='reference' href='#syntax_L6'><i class='icon-map-marker'></i></a><p>Use <code>!</code> instead of <code>not</code>.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad - braces are required because of op precedence</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad - braces are required because of op precedence</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="ow">not</span> <span class="n">something</span><span class="p">)</span>
 
 <span class="c1"># good</span>
 <span class="n">x</span> <span class="o">=</span> <span class="o">!</span><span class="n">something</span>
 </code></pre></div></li><li id='syntax_L7'><a class='reference' href='#syntax_L7'><i class='icon-map-marker'></i></a><p>The <code>and</code> and <code>or</code> keywords are banned. It&#39;s just not worth
 it. Always use <code>&amp;&amp;</code> and <code>||</code> instead.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="c1"># boolean expression</span>
 <span class="k">if</span> <span class="n">some_condition</span> <span class="ow">and</span> <span class="n">some_other_condition</span>
   <span class="n">do_something</span>
@@ -400,7 +400,7 @@ it. Always use <code>&amp;&amp;</code> and <code>||</code> instead.</p>
 </code></pre></div></li><li id='syntax_L8'><a class='reference' href='#syntax_L8'><i class='icon-map-marker'></i></a><p>Do not use multi-line <code>?:</code> (the ternary operator); use <code>if/unless</code> instead.</p>
 </li><li id='syntax_L9'><a class='reference' href='#syntax_L9'><i class='icon-map-marker'></i></a><p>Favor modifier <code>if/unless/while/until</code> usage when you have a single-line
 body. Another good alternative is the usage of control flow <code>&amp;&amp;/||</code>.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">if</span> <span class="n">some_condition</span>
   <span class="n">do_something</span>
 <span class="k">end</span>
@@ -420,7 +420,7 @@ body. Another good alternative is the usage of control flow <code>&amp;&amp;/||<
 <span class="n">do_something</span> <span class="k">while</span> <span class="n">some_condition</span>
 </code></pre></div></li><li id='syntax_L10'><a class='reference' href='#syntax_L10'><i class='icon-map-marker'></i></a><p>Favor <code>unless</code> over <code>if</code> for negative conditions (or control
 flow <code>||</code>). Also Favor <code>until</code> over <code>while</code> for negative conditions.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">do_something</span> <span class="k">if</span> <span class="o">!</span><span class="n">some_condition</span>
 
 <span class="c1"># bad</span>
@@ -438,7 +438,7 @@ flow <code>||</code>). Also Favor <code>until</code> over <code>while</code> for
 <span class="c1"># good</span>
 <span class="n">do_something</span> <span class="k">until</span> <span class="n">some_condition</span>
 </code></pre></div></li><li id='syntax_L11'><a class='reference' href='#syntax_L11'><i class='icon-map-marker'></i></a><p>Never use <code>unless</code> with <code>else</code>. Rewrite these with the positive case first.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">unless</span> <span class="n">success?</span>
   <span class="nb">puts</span> <span class="s1">&#39;failure&#39;</span>
 <span class="k">else</span>
@@ -453,7 +453,7 @@ flow <code>||</code>). Also Favor <code>until</code> over <code>while</code> for
 <span class="k">end</span>
 </code></pre></div></li><li id='syntax_L12'><a class='reference' href='#syntax_L12'><i class='icon-map-marker'></i></a><p>Don&#39;t use parentheses around the condition of an <code>if/unless/while</code>,
 unless the condition contains an assignment.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>
   <span class="c1"># body omitted</span>
 <span class="k">end</span>
@@ -468,26 +468,26 @@ unless the condition contains an assignment.</p>
   <span class="c1"># body omitted</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='syntax_L13'><a class='reference' href='#syntax_L13'><i class='icon-map-marker'></i></a><p>Don&#39;t use the return value of <code>=</code> (an assignment) in conditional expressions.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad (+ a warning)</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad (+ a warning)</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">v</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">grep</span><span class="p">(</span><span class="sr">/foo/</span><span class="p">))</span>
   <span class="n">do_something</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="o">...</span>
 <span class="k">end</span>
 
 <span class="c1"># bad (+ a warning)</span>
 <span class="k">if</span> <span class="n">v</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">grep</span><span class="p">(</span><span class="sr">/foo/</span><span class="p">)</span>
   <span class="n">do_something</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="o">...</span>
 <span class="k">end</span>
 
 <span class="c1"># good</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">grep</span><span class="p">(</span><span class="sr">/foo/</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">v</span>
   <span class="n">do_something</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="o">...</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='syntax_L14'><a class='reference' href='#syntax_L14'><i class='icon-map-marker'></i></a><p>Use Kernel#loop with break rather than <code>begin/end/until</code> or <code>begin/end/while</code> for post-loop tests.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">begin</span>
  <span class="nb">puts</span> <span class="n">val</span>
  <span class="n">val</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -504,7 +504,7 @@ internal DSL (e.g. Rake, Rails, RSpec), methods that have
 &quot;keyword&quot; status in Ruby (e.g. <code>attr_reader</code>, <code>puts</code>) and attribute
 access methods. Use parentheses around the arguments of all other
 method invocations.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Person</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">class</span> <span class="nc">Person</span>
   <span class="kp">attr_reader</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:age</span>
 
   <span class="c1"># omitted</span>
@@ -520,7 +520,7 @@ method invocations.</p>
 
 <span class="n">bowling</span><span class="o">.</span><span class="n">score</span><span class="o">.</span><span class="n">should</span> <span class="o">==</span> <span class="mi">0</span>
 </code></pre></div></li><li id='syntax_L16'><a class='reference' href='#syntax_L16'><i class='icon-map-marker'></i></a><p>Omit parentheses for method calls with no arguments.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="no">Kernel</span><span class="o">.</span><span class="n">exit!</span><span class="p">()</span>
 <span class="mi">2</span><span class="o">.</span><span class="n">even?</span><span class="p">()</span>
 <span class="nb">fork</span><span class="p">()</span>
@@ -536,7 +536,7 @@ method invocations.</p>
 ugly). Always use <code>do...end</code> for &quot;control flow&quot; and &quot;method
 definitions&quot; (e.g. in Rakefiles and certain DSLs).  Avoid <code>do...end</code>
 when chaining.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">names</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;Bozhidar&#39;</span><span class="p">,</span> <span class="s1">&#39;Steve&#39;</span><span class="p">,</span> <span class="s1">&#39;Sarah&#39;</span><span class="o">]</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="n">names</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;Bozhidar&#39;</span><span class="p">,</span> <span class="s1">&#39;Steve&#39;</span><span class="p">,</span> <span class="s1">&#39;Sarah&#39;</span><span class="o">]</span>
 
 <span class="c1"># bad</span>
 <span class="n">names</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
@@ -554,7 +554,7 @@ when chaining.</p>
 <span class="c1"># good</span>
 <span class="n">names</span><span class="o">.</span><span class="n">select</span> <span class="p">{</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span> <span class="nb">name</span><span class="o">.</span><span class="n">start_with?</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">)</span> <span class="p">}</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span> <span class="nb">name</span><span class="o">.</span><span class="n">upcase</span> <span class="p">}</span>
 </code></pre></div></li><li id='syntax_L18'><a class='reference' href='#syntax_L18'><i class='icon-map-marker'></i></a><p>Avoid <code>return</code> where not required for flow of control.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">def</span> <span class="nf">some_method</span><span class="p">(</span><span class="n">some_arr</span><span class="p">)</span>
   <span class="k">return</span> <span class="n">some_arr</span><span class="o">.</span><span class="n">size</span>
 <span class="k">end</span>
@@ -564,7 +564,7 @@ when chaining.</p>
   <span class="n">some_arr</span><span class="o">.</span><span class="n">size</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='syntax_L19'><a class='reference' href='#syntax_L19'><i class='icon-map-marker'></i></a><p>Avoid <code>self</code> where not required. (It is only required when calling a self write accessor)</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">def</span> <span class="nf">ready?</span>
   <span class="k">if</span> <span class="nb">self</span><span class="o">.</span><span class="n">last_reviewed_at</span> <span class="o">&gt;</span> <span class="nb">self</span><span class="o">.</span><span class="n">last_updated_at</span>
     <span class="nb">self</span><span class="o">.</span><span class="n">worker</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="nb">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>
@@ -582,7 +582,7 @@ when chaining.</p>
   <span class="n">status</span> <span class="o">==</span> <span class="ss">:verified</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='syntax_L20'><a class='reference' href='#syntax_L20'><i class='icon-map-marker'></i></a><p>Avoid shadowing methods with local variables unless they are both equivalent.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Foo</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">class</span> <span class="nc">Foo</span>
   <span class="kp">attr_accessor</span> <span class="ss">:options</span>
 
   <span class="c1"># ok</span>
@@ -606,23 +606,23 @@ when chaining.</p>
   <span class="k">end</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='syntax_L21'><a class='reference' href='#syntax_L21'><i class='icon-map-marker'></i></a><p>Use <code>||=</code> freely to initialize variables.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># set name to Bozhidar, only if it&#39;s nil or false</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># set name to Bozhidar, only if it&#39;s nil or false</span>
 <span class="nb">name</span> <span class="o">||=</span> <span class="s1">&#39;Bozhidar&#39;</span>
 </code></pre></div></li><li id='syntax_L22'><a class='reference' href='#syntax_L22'><i class='icon-map-marker'></i></a><p>Don&#39;t use <code>||=</code> to initialize boolean variables. (Consider what
 would happen if the current value happened to be <code>false</code>.)</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad - would set enabled to true even if it was false</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad - would set enabled to true even if it was false</span>
 <span class="n">enabled</span> <span class="o">||=</span> <span class="kp">true</span>
 
 <span class="c1"># good</span>
 <span class="n">enabled</span> <span class="o">=</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">enabled</span><span class="o">.</span><span class="n">nil?</span>
 </code></pre></div></li><li id='syntax_L23'><a class='reference' href='#syntax_L23'><i class='icon-map-marker'></i></a><p>Prefer <code>proc</code> over <code>Proc.new</code>.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="nb">p</span> <span class="o">=</span> <span class="no">Proc</span><span class="o">.</span><span class="n">new</span> <span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">n</span> <span class="p">}</span>
 
 <span class="c1"># good</span>
 <span class="nb">p</span> <span class="o">=</span> <span class="nb">proc</span> <span class="p">{</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">n</span> <span class="p">}</span>
 </code></pre></div></li><li id='syntax_L24'><a class='reference' href='#syntax_L24'><i class='icon-map-marker'></i></a><p>Use <code>_</code> for unused block parameters.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">result</span> <span class="o">=</span> <span class="nb">hash</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="o">|</span> <span class="n">v</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">}</span>
 
 <span class="c1"># good</span>
@@ -630,7 +630,7 @@ would happen if the current value happened to be <code>false</code>.)</p>
 </code></pre></div></li><li id='syntax_L25'><a class='reference' href='#syntax_L25'><i class='icon-map-marker'></i></a><p>Use <code>[*var]</code> or <code>Array()</code> instead of explicit <code>Array</code> check, when dealing with a
 variable you want to treat as an Array, but you&#39;re not certain it&#39;s
 an array.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">paths</span> <span class="o">=</span> <span class="o">[</span><span class="n">paths</span><span class="o">]</span> <span class="k">unless</span> <span class="n">paths</span><span class="o">.</span><span class="n">is_a?</span> <span class="nb">Array</span>
 <span class="n">paths</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span> <span class="n">do_something</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="p">}</span>
 
@@ -640,13 +640,13 @@ an array.</p>
 <span class="c1"># good (and a bit more readable)</span>
 <span class="nb">Array</span><span class="p">(</span><span class="n">paths</span><span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span> <span class="n">do_something</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="p">}</span>
 </code></pre></div></li><li id='syntax_L26'><a class='reference' href='#syntax_L26'><i class='icon-map-marker'></i></a><p>Use ranges instead of complex comparison logic when possible.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">do_something</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">1000</span> <span class="o">&amp;&amp;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">2000</span>
 
 <span class="c1"># good</span>
-<span class="n">do_something</span> <span class="k">if</span> <span class="p">(</span><span class="mi">1000</span><span class="o">.</span><span class="n">.</span><span class="o">.</span><span class="mi">2000</span><span class="p">)</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">do_something</span> <span class="k">if</span> <span class="p">(</span><span class="mi">1000</span><span class="o">...</span><span class="mi">2000</span><span class="p">)</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div></li><li id='syntax_L27'><a class='reference' href='#syntax_L27'><i class='icon-map-marker'></i></a><p>Prefer the <code>-&gt;</code> operator over <code>lambda</code> for creating Procs</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">be_awesome</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span><span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">word</span><span class="si">}</span><span class="s2"> is awesome!&quot;</span> <span class="p">}</span>
 
 <span class="c1"># good</span>
@@ -655,7 +655,7 @@ an array.</p>
 
 <ul>
 <li id='syntax_L28'><a class='reference' href='#syntax_L28'><i class='icon-map-marker'></i></a><p>Never put a space between <code>-&gt;</code> and the leading parenthesis for it&#39;s parameters</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">print_something</span> <span class="o">=</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">something</span><span class="p">)</span> <span class="p">{</span> <span class="nb">puts</span> <span class="n">something</span> <span class="p">}</span>
 
 <span class="c1"># good</span>
@@ -665,7 +665,7 @@ an array.</p>
 <ul>
 <li id='naming_L1'><a class='reference' href='#naming_L1'><i class='icon-map-marker'></i></a><p>Name identifiers in English.</p>
 </li><li id='naming_L2'><a class='reference' href='#naming_L2'><i class='icon-map-marker'></i></a><p>Use <code>snake_case</code> for symbols, methods and variables.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="ss">:&#39;some symbol&#39;</span>
 <span class="ss">:SomeSymbol</span>
 <span class="ss">:someSymbol</span>
@@ -673,44 +673,44 @@ an array.</p>
 <span class="n">someVar</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="k">def</span> <span class="nf">someMethod</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="o">...</span>
 <span class="k">end</span>
 
 <span class="k">def</span> <span class="nf">SomeMethod</span>
- <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+ <span class="o">...</span>
 <span class="k">end</span>
 
 <span class="c1"># good</span>
 <span class="ss">:some_symbol</span>
 
 <span class="k">def</span> <span class="nf">some_method</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="o">...</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='naming_L3'><a class='reference' href='#naming_L3'><i class='icon-map-marker'></i></a><p>Use <code>CamelCase</code> for classes and modules.  (Keep acronyms like HTTP,
 RFC, XML uppercase.)</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">class</span> <span class="nc">Someclass</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="o">...</span>
 <span class="k">end</span>
 
 <span class="k">class</span> <span class="nc">Some_Class</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="o">...</span>
 <span class="k">end</span>
 
 <span class="k">class</span> <span class="nc">SomeXml</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="o">...</span>
 <span class="k">end</span>
 
 <span class="c1"># good</span>
 <span class="k">class</span> <span class="nc">SomeClass</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="o">...</span>
 <span class="k">end</span>
 
 <span class="k">class</span> <span class="nc">SomeXML</span>
-  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="o">...</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='naming_L4'><a class='reference' href='#naming_L4'><i class='icon-map-marker'></i></a><p>Use <code>SCREAMING_SNAKE_CASE</code> for other constants.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="no">SomeConst</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="c1"># good</span>
@@ -722,7 +722,7 @@ should end in a question mark.
 modify <code>self</code> or the arguments, <code>exit!</code> (doesn&#39;t run the finalizers
 like <code>exit</code> does), etc.) should end with an exclamation mark if
 there exists a safe version of that <em>dangerous</em> method.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad - there is not matching &#39;safe&#39; method</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad - there is not matching &#39;safe&#39; method</span>
 <span class="k">class</span> <span class="nc">Person</span>
   <span class="k">def</span> <span class="nf">update!</span>
   <span class="k">end</span>
@@ -748,7 +748,7 @@ there exists a safe version of that <em>dangerous</em> method.</p>
 or the singular form of the mapped variable.</p>
 </li><li id='naming_L9'><a class='reference' href='#naming_L9'><i class='icon-map-marker'></i></a><p>When defining binary operators, name the argument <code>other</code>(<code>&lt;&lt;</code> and
 <code>[]</code> are exceptions to the rule, since their semantics are different).</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">+</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">def</span> <span class="nf">+</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
   <span class="c1"># body omitted</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='naming_L10'><a class='reference' href='#naming_L10'><i class='icon-map-marker'></i></a><p>Prefer <code>map</code> over <code>collect</code>, <code>reduce</code> over <code>inject</code>, <code>detect</code> over <code>find</code>, <code>select</code> over
@@ -757,7 +757,7 @@ or the singular form of the mapped variable.</p>
 This does not apply for arrays with a depth greater than 2, i.e.
 if <code>users.first.songs == [&#39;a&#39;, [&#39;b&#39;,&#39;c&#39;]]</code>, then use <code>map + flatten</code> rather than <code>flat_map</code>.
 <code>flat_map</code> flattens the array by 1, whereas <code>flatten</code> flattens it all the way.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">all_songs</span> <span class="o">=</span> <span class="n">users</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:songs</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="o">.</span><span class="n">uniq</span>
 
 <span class="c1"># good</span>
@@ -772,7 +772,7 @@ of the comment.
 </li><li id='comments_L4'><a class='reference' href='#comments_L4'><i class='icon-map-marker'></i></a>Comments longer than a word are capitalized and use punctuation. Use <a href="http://en.wikipedia.org/wiki/Sentence_spacing">one
 space</a> after periods.
 </li><li id='comments_L5'><a class='reference' href='#comments_L5'><i class='icon-map-marker'></i></a><p>Avoid superfluous comments.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1"># increments counter by one</span>
 </code></pre></div></li><li id='comments_L6'><a class='reference' href='#comments_L6'><i class='icon-map-marker'></i></a><p>Keep existing comments up-to-date. An outdated comment is worse than no comment
 at all.</p>
@@ -787,7 +787,7 @@ the relevant code.
 describing the problem.
 </li><li id='comment-annotations_L3'><a class='reference' href='#comment-annotations_L3'><i class='icon-map-marker'></i></a><p>If multiple lines are required to describe the problem, subsequent
 lines should be indented two spaces after the <code>#</code>.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">bar</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">def</span> <span class="nf">bar</span>
   <span class="c1"># FIXME: This has crashed occasionally since v3.2.1. It may</span>
   <span class="c1">#   be related to the BarBazUtil upgrade.</span>
   <span class="n">baz</span><span class="p">(</span><span class="ss">:quux</span><span class="p">)</span>
@@ -795,7 +795,7 @@ lines should be indented two spaces after the <code>#</code>.</p>
 </code></pre></div></li><li id='comment-annotations_L4'><a class='reference' href='#comment-annotations_L4'><i class='icon-map-marker'></i></a><p>In cases where the problem is so obvious that any documentation would
 be redundant, annotations may be left at the end of the offending line
 with no note. This usage should be the exception and not the rule.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">bar</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">def</span> <span class="nf">bar</span>
   <span class="nb">sleep</span> <span class="mi">100</span> <span class="c1"># OPTIMIZE</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='comment-annotations_L5'><a class='reference' href='#comment-annotations_L5'><i class='icon-map-marker'></i></a><p>Use <code>TODO</code> to note missing features or functionality that should be
@@ -814,7 +814,7 @@ sure to document them in your project&#39;s <code>README</code> or similar.</p>
 <h2 id='classes--modules'><a class='reference' href='#classes--modules'><i class='icon-map-marker'></i></a>Classes &amp; Modules</h2>
 <ul>
 <li id='classes--modules_L1'><a class='reference' href='#classes--modules_L1'><i class='icon-map-marker'></i></a><p>Use a consistent structure in your class definitions.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Person</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">class</span> <span class="nc">Person</span>
   <span class="c1"># extend and include go first</span>
   <span class="kp">extend</span> <span class="no">SomeModule</span>
   <span class="kp">include</span> <span class="no">AnotherModule</span>
@@ -845,7 +845,7 @@ sure to document them in your project&#39;s <code>README</code> or similar.</p>
 <span class="k">end</span>
 </code></pre></div></li><li id='classes--modules_L2'><a class='reference' href='#classes--modules_L2'><i class='icon-map-marker'></i></a><p>Prefer modules to classes with only class methods. Classes should be
 used only when it makes sense to create instances out of them.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">class</span> <span class="nc">SomeClass</span>
   <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">some_method</span>
     <span class="c1"># body omitted</span>
@@ -868,7 +868,7 @@ used only when it makes sense to create instances out of them.</p>
 <span class="k">end</span>
 </code></pre></div></li><li id='classes--modules_L3'><a class='reference' href='#classes--modules_L3'><i class='icon-map-marker'></i></a><p>Favor the use of <code>module_function</code> over <code>extend self</code> when you want
 to turn a module&#39;s instance methods into class methods.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">module</span> <span class="nn">Utilities</span>
   <span class="kp">extend</span> <span class="nb">self</span>
 
@@ -895,7 +895,7 @@ to turn a module&#39;s instance methods into class methods.</p>
 <span class="k">end</span>
 </code></pre></div></li><li id='classes--modules_L4'><a class='reference' href='#classes--modules_L4'><i class='icon-map-marker'></i></a><p>Use the <code>attr</code> family of functions to define trivial accessors or
 mutators.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">class</span> <span class="nc">Person</span>
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span>
     <span class="vi">@first_name</span> <span class="o">=</span> <span class="n">first_name</span>
@@ -922,7 +922,7 @@ mutators.</p>
 <span class="k">end</span>
 </code></pre></div></li><li id='classes--modules_L5'><a class='reference' href='#classes--modules_L5'><i class='icon-map-marker'></i></a><p>Avoid the usage of class (<code>@@</code>) variables due to their &quot;nasty&quot; behavior
 in inheritance.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Parent</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">class</span> <span class="nc">Parent</span>
   <span class="vc">@@class_var</span> <span class="o">=</span> <span class="s1">&#39;parent&#39;</span>
 
   <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">print_class_var</span>
@@ -936,7 +936,7 @@ in inheritance.</p>
 
 <span class="no">Parent</span><span class="o">.</span><span class="n">print_class_var</span> <span class="c1"># =&gt; will print &quot;child&quot;</span>
 </code></pre></div></li><li id='classes--modules_L6'><a class='reference' href='#classes--modules_L6'><i class='icon-map-marker'></i></a><p>Avoid class &lt;&lt; self except when necessary, e.g. single accessors and aliased attributes.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">TestClass</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">class</span> <span class="nc">TestClass</span>
   <span class="c1"># bad</span>
   <span class="k">class</span> <span class="o">&lt;&lt;</span> <span class="nb">self</span>
     <span class="k">def</span> <span class="nf">first_method</span>
@@ -970,7 +970,7 @@ in inheritance.</p>
 in accordance with their intended usage. Don&#39;t go off leaving
 everything <code>public</code> (which is the default).</p>
 </li><li id='private--protected-methods_L3'><a class='reference' href='#private--protected-methods_L3'><i class='icon-map-marker'></i></a><p><strong>For applications/gems with Ruby &gt;= 2.1</strong>, use <code>private def method_name</code>.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># good</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># good</span>
 <span class="k">class</span> <span class="nc">SomeClass</span>
   <span class="k">def</span> <span class="nf">public_method</span>
     <span class="c1"># ...</span>
@@ -988,7 +988,7 @@ everything <code>public</code> (which is the default).</p>
 <code>private :method_name</code> <em>or</em> <code>private</code>, depending on the existing convention in place.</p>
 </li><li id='private--protected-methods_L5'><a class='reference' href='#private--protected-methods_L5'><i class='icon-map-marker'></i></a><p>Using <code>private :method_name</code>, pass the method name to public, or private one line
 below the visibility controlled method.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># ok</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># ok</span>
 <span class="k">class</span> <span class="nc">SomeClass</span>
   <span class="k">def</span> <span class="nf">public_method</span>
     <span class="c1"># ...</span>
@@ -1008,7 +1008,7 @@ below the visibility controlled method.</p>
 definitions they apply to. Leave one blank line above the visibility modifier
 and one blank line below in order to emphasize that it applies to all methods
 below it.  </p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad - private methods are indented too far</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad - private methods are indented too far</span>
 <span class="k">class</span> <span class="nc">SomeClass</span>
   <span class="k">def</span> <span class="nf">public_method</span>
     <span class="c1"># ...</span>
@@ -1049,7 +1049,7 @@ method inside an <code>ensure</code> block, the return will take precedence over
 any exception being raised, and the method will return as if no
 exception had been raised at all. In effect, the exception will be
 silently thrown away.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">foo</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">def</span> <span class="nf">foo</span>
   <span class="k">begin</span>
     <span class="nb">fail</span>
   <span class="k">ensure</span>
@@ -1057,7 +1057,7 @@ silently thrown away.</p>
   <span class="k">end</span>
 <span class="k">end</span>
 </code></pre></div></li><li id='exceptions_L2'><a class='reference' href='#exceptions_L2'><i class='icon-map-marker'></i></a><p>Use <em>implicit begin blocks</em> where possible.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">def</span> <span class="nf">foo</span>
 <span class="k">begin</span>
   <span class="c1"># main logic goes here</span>
@@ -1074,7 +1074,7 @@ silently thrown away.</p>
 <span class="k">end</span>
 </code></pre></div></li><li id='exceptions_L3'><a class='reference' href='#exceptions_L3'><i class='icon-map-marker'></i></a><p>Mitigate the proliferation of <code>begin</code> blocks by using
 <em>contingency methods</em> (a term coined by Avdi Grimm).</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">begin</span>
   <span class="n">something_that_might_fail</span>
 <span class="k">rescue</span> <span class="no">IOError</span>
@@ -1098,7 +1098,7 @@ silently thrown away.</p>
 
 <span class="n">with_io_error_handling</span> <span class="p">{</span> <span class="n">something_else_that_might_fail</span> <span class="p">}</span>
 </code></pre></div></li><li id='exceptions_L4'><a class='reference' href='#exceptions_L4'><i class='icon-map-marker'></i></a><p>Don&#39;t suppress exceptions.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">begin</span>
   <span class="c1"># an exception occurs here</span>
 <span class="k">rescue</span> <span class="no">SomeError</span>
@@ -1108,10 +1108,10 @@ silently thrown away.</p>
 <span class="c1"># bad</span>
 <span class="n">do_something</span> <span class="k">rescue</span> <span class="kp">nil</span>
 </code></pre></div></li><li id='exceptions_L5'><a class='reference' href='#exceptions_L5'><i class='icon-map-marker'></i></a><p>Avoid using <code>rescue</code> in its modifier form.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad - this catches all StandardError exceptions</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad - this catches all StandardError exceptions</span>
 <span class="n">do_something</span> <span class="k">rescue</span> <span class="kp">nil</span>
 </code></pre></div></li><li id='exceptions_L6'><a class='reference' href='#exceptions_L6'><i class='icon-map-marker'></i></a><p>Don&#39;t use exceptions for flow of control.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">begin</span>
   <span class="n">n</span> <span class="o">/</span> <span class="n">d</span>
 <span class="k">rescue</span> <span class="no">ZeroDivisionError</span>
@@ -1126,7 +1126,7 @@ silently thrown away.</p>
 <span class="k">end</span>
 </code></pre></div></li><li id='exceptions_L7'><a class='reference' href='#exceptions_L7'><i class='icon-map-marker'></i></a><p>Avoid rescuing the <code>Exception</code> class.  This will trap signals and calls to
 <code>exit</code>, requiring you to <code>kill -9</code> the process.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="k">begin</span>
   <span class="c1"># calls to exit and kill signals will be caught (except kill -9)</span>
   <span class="nb">exit</span>
@@ -1155,7 +1155,7 @@ introducing new exception classes.</p>
 </li><li id='exceptions_L9'><a class='reference' href='#exceptions_L9'><i class='icon-map-marker'></i></a><p>Favor error classes over exception classes.</p>
 </li><li id='exceptions_L10'><a class='reference' href='#exceptions_L10'><i class='icon-map-marker'></i></a><p>Favor inheriting from <code>StandardError</code> over <code>Exception</code> when defining new errors/exceptions.</p>
 </li><li id='exceptions_L11'><a class='reference' href='#exceptions_L11'><i class='icon-map-marker'></i></a><p>Basic errors should be defined on a single line using <code>Class.new</code>.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1">#bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1">#bad</span>
 <span class="k">class</span> <span class="nc">AwesomeError</span> <span class="o">&lt;</span> <span class="no">StandardError</span><span class="p">;</span> <span class="k">end</span>
 
 <span class="c1">#good</span>
@@ -1165,7 +1165,7 @@ introducing new exception classes.</p>
 <ul>
 <li id='collections_L1'><a class='reference' href='#collections_L1'><i class='icon-map-marker'></i></a><p>Prefer literal array and hash creation notation (unless you need to
 pass parameters to their constructors, that is).</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">arr</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span>
 <span class="nb">hash</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span>
 
@@ -1175,30 +1175,30 @@ pass parameters to their constructors, that is).</p>
 </code></pre></div></li><li id='collections_L2'><a class='reference' href='#collections_L2'><i class='icon-map-marker'></i></a><p>Prefer <code>%w</code> to the literal array syntax when you need an array of
 words(non-empty strings without spaces and special characters in them).
 Apply this rule only to arrays with two or more elements.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="no">STATES</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;draft&#39;</span><span class="p">,</span> <span class="s1">&#39;open&#39;</span><span class="p">,</span> <span class="s1">&#39;closed&#39;</span><span class="o">]</span>
 
 <span class="c1"># good</span>
 <span class="no">STATES</span> <span class="o">=</span> <span class="sx">%w(draft open closed)</span>
 </code></pre></div></li><li id='collections_L3'><a class='reference' href='#collections_L3'><i class='icon-map-marker'></i></a><p>Avoid the creation of huge gaps in arrays.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">arr</span> <span class="o">=</span> <span class="o">[]</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="n">arr</span> <span class="o">=</span> <span class="o">[]</span>
 <span class="n">arr</span><span class="o">[</span><span class="mi">100</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># now you have an array with lots of nils</span>
 </code></pre></div></li><li id='collections_L4'><a class='reference' href='#collections_L4'><i class='icon-map-marker'></i></a><p>When accessing the first or last element from an array, prefer <code>first</code> or <code>last</code> over <code>[0]</code> or <code>[-1]</code>.</p>
 </li><li id='collections_L5'><a class='reference' href='#collections_L5'><i class='icon-map-marker'></i></a><p>Prefer symbols instead of strings as hash keys.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="nb">hash</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;one&#39;</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span> <span class="p">}</span>
 
 <span class="c1"># good</span>
 <span class="nb">hash</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">one</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">two</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="ss">three</span><span class="p">:</span> <span class="mi">3</span> <span class="p">}</span>
 </code></pre></div></li><li id='collections_L6'><a class='reference' href='#collections_L6'><i class='icon-map-marker'></i></a><p>Avoid the use of mutable objects as hash keys.</p>
 </li><li id='collections_L7'><a class='reference' href='#collections_L7'><i class='icon-map-marker'></i></a><p>Use the hash literal syntax when your hash keys are symbols.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="nb">hash</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:one</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">:two</span> <span class="o">=&gt;</span> <span class="mi">2</span><span class="p">,</span> <span class="ss">:three</span> <span class="o">=&gt;</span> <span class="mi">3</span> <span class="p">}</span>
 
 <span class="c1"># good</span>
 <span class="nb">hash</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">one</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="ss">two</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="ss">three</span><span class="p">:</span> <span class="mi">3</span> <span class="p">}</span>
 </code></pre></div></li><li id='collections_L8'><a class='reference' href='#collections_L8'><i class='icon-map-marker'></i></a><p>Use <code>fetch</code> when dealing with hash keys that should be present.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">heroes</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">batman</span><span class="p">:</span> <span class="s1">&#39;Bruce Wayne&#39;</span><span class="p">,</span> <span class="ss">superman</span><span class="p">:</span> <span class="s1">&#39;Clark Kent&#39;</span> <span class="p">}</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="n">heroes</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">batman</span><span class="p">:</span> <span class="s1">&#39;Bruce Wayne&#39;</span><span class="p">,</span> <span class="ss">superman</span><span class="p">:</span> <span class="s1">&#39;Clark Kent&#39;</span> <span class="p">}</span>
 <span class="c1"># bad - if we make a mistake we might not spot it right away</span>
 <span class="n">heroes</span><span class="o">[</span><span class="ss">:batman</span><span class="o">]</span> <span class="c1"># =&gt; &quot;Bruce Wayne&quot;</span>
 <span class="n">heroes</span><span class="o">[</span><span class="ss">:supermann</span><span class="o">]</span> <span class="c1"># =&gt; nil</span>
@@ -1206,7 +1206,7 @@ Apply this rule only to arrays with two or more elements.</p>
 <span class="c1"># good - fetch raises a KeyError making the problem obvious</span>
 <span class="n">heroes</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="ss">:supermann</span><span class="p">)</span>
 </code></pre></div></li><li id='collections_L9'><a class='reference' href='#collections_L9'><i class='icon-map-marker'></i></a><p>Use <code>fetch</code> with second argument to use a default value</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">batman</span> <span class="o">=</span> <span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;Bruce Wayne&#39;</span><span class="p">,</span> <span class="n">is_evil</span><span class="p">:</span> <span class="kp">false</span> <span class="p">}</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="n">batman</span> <span class="o">=</span> <span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s1">&#39;Bruce Wayne&#39;</span><span class="p">,</span> <span class="ss">is_evil</span><span class="p">:</span> <span class="kp">false</span> <span class="p">}</span>
 
 <span class="c1"># bad - if we just use || operator with falsy value we won&#39;t get the expected result</span>
 <span class="n">batman</span><span class="o">[</span><span class="ss">:is_evil</span><span class="o">]</span> <span class="o">||</span> <span class="kp">true</span> <span class="c1"># =&gt; true</span>
@@ -1218,20 +1218,20 @@ Apply this rule only to arrays with two or more elements.</p>
 <h2 id='strings'><a class='reference' href='#strings'><i class='icon-map-marker'></i></a>Strings</h2>
 <ul>
 <li id='strings_L1'><a class='reference' href='#strings_L1'><i class='icon-map-marker'></i></a><p>Prefer string interpolation instead of string concatenation:</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">email_with_name</span> <span class="o">=</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s1">&#39; &lt;&#39;</span> <span class="o">+</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="o">+</span> <span class="s1">&#39;&gt;&#39;</span>
 
 <span class="c1"># good</span>
 <span class="n">email_with_name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> &lt;</span><span class="si">#{</span><span class="n">user</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s2">&gt;&quot;</span>
 </code></pre></div></li><li id='strings_L2'><a class='reference' href='#strings_L2'><i class='icon-map-marker'></i></a><p>Prefer double-quoted strings. Interpolation and escaped characters will always work without a delimiter change, and &#39; is a lot more common than &quot; in string literals.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="nb">name</span> <span class="o">=</span> <span class="s1">&#39;Bozhidar&#39;</span>
 
 <span class="c1"># good</span>
 <span class="nb">name</span> <span class="o">=</span> <span class="s2">&quot;Bozhidar&quot;</span>
 </code></pre></div></li><li id='strings_L3'><a class='reference' href='#strings_L3'><i class='icon-map-marker'></i></a><p>Don&#39;t leave out <code>{}</code> around instance and global variables being
 interpolated into a string.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Person</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">class</span> <span class="nc">Person</span>
   <span class="kp">attr_reader</span> <span class="ss">:first_name</span><span class="p">,</span> <span class="ss">:last_name</span>
 
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">)</span>
@@ -1257,17 +1257,17 @@ interpolated into a string.</p>
 <span class="c1"># good</span>
 <span class="nb">puts</span> <span class="s2">&quot;$global = </span><span class="si">#{</span><span class="vg">$global</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div></li><li id='strings_L4'><a class='reference' href='#strings_L4'><i class='icon-map-marker'></i></a><p>Don&#39;t pass heredoc strings to methods. Use a temporary variable.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
-<span class="n">execute</span><span class="p">(</span><span class="o">&lt;&lt;-</span><span class="no">QUERY</span><span class="p">)</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
+<span class="n">execute</span><span class="p">(</span><span class="o">&lt;&lt;-</span><span class="dl">QUERY</span><span class="p">)</span>
 <span class="sh">  UPDATE users SET username = &quot;Bob&quot; WHERE id=1;</span>
 <span class="sh">  UPDATE users SET username = &quot;Billy&quot; WHERE id=2;</span>
-<span class="no">QUERY</span>
+<span class="dl">QUERY</span>
 
 <span class="c1"># good</span>
-<span class="n">query</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">QUERY</span>
+<span class="n">query</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="dl">QUERY</span>
 <span class="sh">  UPDATE users SET username = &quot;Bob&quot; WHERE id=1;</span>
 <span class="sh">  UPDATE users SET username = &quot;Billy&quot; WHERE id=2;</span>
-<span class="no">QUERY</span>
+<span class="dl">QUERY</span>
 <span class="n">execute</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
 </code></pre></div></li></ul>
 <h2 id='regular-expressions'><a class='reference' href='#regular-expressions'><i class='icon-map-marker'></i></a>Regular Expressions</h2>
@@ -1275,25 +1275,25 @@ interpolated into a string.</p>
 <li id='regular-expressions_L1'><a class='reference' href='#regular-expressions_L1'><i class='icon-map-marker'></i></a><p>Don&#39;t use regular expressions if you just need plain text search in string:
 <code>string[&#39;text&#39;]</code></p>
 </li><li id='regular-expressions_L2'><a class='reference' href='#regular-expressions_L2'><i class='icon-map-marker'></i></a><p>Use non-capturing groups when you don&#39;t use captured result of parentheses.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="sr">/(first|second)/</span>   <span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="sr">/(first|second)/</span>   <span class="c1"># bad</span>
 <span class="sr">/(?:first|second)/</span> <span class="c1"># good</span>
 </code></pre></div></li><li id='regular-expressions_L3'><a class='reference' href='#regular-expressions_L3'><i class='icon-map-marker'></i></a><p>Avoid using $1-9 as it can be hard to track what they contain. Named groups
 can be used instead.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="sr">/(regexp)/</span> <span class="o">=~</span> <span class="n">string</span>
-<span class="o">.</span><span class="n">.</span><span class="o">.</span>
+<span class="o">...</span>
 <span class="n">process</span> <span class="vg">$1</span>
 
 <span class="c1"># good</span>
 <span class="sr">/(?&lt;meaningful_var&gt;regexp)/</span> <span class="o">=~</span> <span class="n">string</span>
-<span class="o">.</span><span class="n">.</span><span class="o">.</span>
+<span class="o">...</span>
 <span class="n">process</span> <span class="n">meaningful_var</span>
 </code></pre></div></li></ul>
 <h2 id='percent-literals'><a class='reference' href='#percent-literals'><i class='icon-map-marker'></i></a>Percent Literals</h2>
 <ul>
 <li id='percent-literals_L1'><a class='reference' href='#percent-literals_L1'><i class='icon-map-marker'></i></a><p>Use <code>%()</code>(it&#39;s a shorthand for <code>%Q</code>) for single-line strings which require both interpolation
 and embedded double-quotes. For multi-line strings, prefer heredocs.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad (no interpolation needed)</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad (no interpolation needed)</span>
 <span class="sx">%(&lt;div class=&quot;text&quot;&gt;Some text&lt;/div&gt;)</span>
 <span class="c1"># should be &#39;&lt;div class=&quot;text&quot;&gt;Some text&lt;/div&gt;&#39;</span>
 
@@ -1316,7 +1316,7 @@ and embedded double-quotes. For multi-line strings, prefer heredocs.</p>
 </li><li id='misc_L3'><a class='reference' href='#misc_L3'><i class='icon-map-marker'></i></a>If you really need &quot;global&quot; methods, add them to Kernel
 and make them private.
 </li><li id='misc_L4'><a class='reference' href='#misc_L4'><i class='icon-map-marker'></i></a><p>Use module instance variables instead of global variables.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="vg">$foo_bar</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="c1">#good</span>
@@ -1345,7 +1345,7 @@ and make them private.
 </li><li id='never-ever_L4'><a class='reference' href='#never-ever_L4'><i class='icon-map-marker'></i></a><p>Never use <code>when x; ...</code>. See the previous rule.</p>
 </li><li id='never-ever_L5'><a class='reference' href='#never-ever_L5'><i class='icon-map-marker'></i></a><p>Don&#39;t use <code>;</code> to separate statements and expressions. As a
 corollary - use one expression per line. In general, don&#39;t use semicolons.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="nb">puts</span> <span class="s1">&#39;foobar&#39;</span><span class="p">;</span> <span class="c1"># superfluous semicolon</span>
 
 <span class="nb">puts</span> <span class="s1">&#39;foo&#39;</span><span class="p">;</span> <span class="nb">puts</span> <span class="s1">&#39;bar&#39;</span> <span class="c1"># two expression on the same line</span>
@@ -1360,13 +1360,13 @@ corollary - use one expression per line. In general, don&#39;t use semicolons.</
 </code></pre></div></li><li id='never-ever_L6'><a class='reference' href='#never-ever_L6'><i class='icon-map-marker'></i></a><p>Never use <code>for</code></p>
 </li><li id='never-ever_L7'><a class='reference' href='#never-ever_L7'><i class='icon-map-marker'></i></a><p>Avoid using Perl-style special variables (like <code>$0-9</code>, <code>$</code>, etc. )</p>
 </li><li id='never-ever_L8'><a class='reference' href='#never-ever_L8'><i class='icon-map-marker'></i></a><p>Never put a space between a method name and the opening parenthesis.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="n">f</span> <span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
 
 <span class="c1"># good</span>
 <span class="n">f</span><span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
 </code></pre></div></li><li id='never-ever_L9'><a class='reference' href='#never-ever_L9'><i class='icon-map-marker'></i></a><p>Use <code>sprintf</code> instead of <code>String#%</code> method.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="s1">&#39;%d %d&#39;</span> <span class="o">%</span> <span class="o">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="o">]</span>
 <span class="c1"># =&gt; &#39;20 10&#39;</span>
 
@@ -1375,7 +1375,7 @@ corollary - use one expression per line. In general, don&#39;t use semicolons.</
 <span class="c1"># =&gt; &#39;20 10&#39;</span>
 </code></pre></div></li><li id='never-ever_L10'><a class='reference' href='#never-ever_L10'><i class='icon-map-marker'></i></a><p>Use <code>Array#join</code> instead of <code>Array#*</code> with
 a string argument.</p>
-<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># bad</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
 <span class="sx">%w(one two three)</span> <span class="o">*</span> <span class="s1">&#39;, &#39;</span>
 <span class="c1"># =&gt; &#39;one, two, three&#39;</span>
 
@@ -1396,6 +1396,7 @@ a string argument.</p>
     </div>
 
     
+
   </body>
 </html>
 

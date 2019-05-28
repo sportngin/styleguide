@@ -1,9 +1,9 @@
 
-http://sportngin.github.io/styleguide/android.html
-http://sportngin.github.io/styleguide/angular.html
-http://sportngin.github.io/styleguide/index.html
-http://sportngin.github.io/styleguide/javascript.html
-http://sportngin.github.io/styleguide/objective-c.html
-http://sportngin.github.io/styleguide/ruby.html
+http://sportngin.github.io/styleguide/android
+http://sportngin.github.io/styleguide/angular
+http://sportngin.github.io/styleguide/
+http://sportngin.github.io/styleguide/javascript
+http://sportngin.github.io/styleguide/objective-c
+http://sportngin.github.io/styleguide/ruby
 http://sportngin.github.io/styleguide/sitemap.txt
-http://sportngin.github.io/styleguide/swift.html
+http://sportngin.github.io/styleguide/swift

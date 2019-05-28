@@ -16,9 +16,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/css/github.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//css/github.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -34,7 +34,7 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
-          <a class="brand" href="http://sportngin.github.io/styleguide">Sport Ngin Style Guide</a>
+          <a class="brand" href="http://sportngin.github.io/styleguide">SportsEngine Style Guide</a>
           <ul class="nav">
             
             
@@ -45,7 +45,7 @@
     
       
       	
-      	<li class="active"><a href="http://sportngin.github.io/styleguide/android.html" class="active">Android</a></li>
+      	<li class="active"><a href="http://sportngin.github.io/styleguide/android" class="active">Android</a></li>
       	
       
     
@@ -53,35 +53,7 @@
     
       
       	
-      	<li><a href="http://sportngin.github.io/styleguide/angular.html">Angular</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="http://sportngin.github.io/styleguide/javascript.html">JavaScript</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="http://sportngin.github.io/styleguide/objective-c.html">Objective-C</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="http://sportngin.github.io/styleguide/ruby.html">Ruby</a></li>
+      	<li><a href="http://sportngin.github.io/styleguide/angular">Angular</a></li>
       	
       
     
@@ -93,7 +65,35 @@
     
       
       	
-      	<li><a href="http://sportngin.github.io/styleguide/swift.html">Swift</a></li>
+      	<li><a href="http://sportngin.github.io/styleguide/javascript">JavaScript</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="http://sportngin.github.io/styleguide/objective-c">Objective-C</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="http://sportngin.github.io/styleguide/ruby">Ruby</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="http://sportngin.github.io/styleguide/swift">Swift</a></li>
       	
       
     
@@ -153,7 +153,7 @@ If you can&#39;t find an answer in here, use your best judgement and keep things
 <hr>
 <h2 id='java-language-rules'><a class='reference' href='#java-language-rules'><i class='icon-map-marker'></i></a>Java Language Rules</h2><h3 id='do-not-ignore-exceptions'><a class='reference' href='#do-not-ignore-exceptions'><i class='icon-map-marker'></i></a>Do not Ignore Exceptions</h3>
 <p>Either throw a new exception or handle the error in the catch block. If you do ignore an exception, rename the catch expression to <code>ignored</code>.</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="kt">void</span> <span class="nf">setServerPort</span><span class="o">(</span><span class="n">String</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kt">void</span> <span class="nf">setServerPort</span><span class="o">(</span><span class="n">String</span> <span class="n">value</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">try</span> <span class="o">{</span>
         <span class="n">serverPort</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">value</span><span class="o">);</span>
     <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">NumberFormatException</span> <span class="n">ignored</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span>
@@ -196,7 +196,7 @@ If you can&#39;t find an answer in here, use your best judgement and keep things
 </li><li id='variable-declarations_L5'><a class='reference' href='#variable-declarations_L5'><i class='icon-map-marker'></i></a>Public static final fields (constants) are ALL_CAPS_WITH_UNDERSCORES.
 </li><li id='variable-declarations_L6'><a class='reference' href='#variable-declarations_L6'><i class='icon-map-marker'></i></a>All variables should use camel case for naming
 </li></ul>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">SOME_CONSTANT</span> <span class="o">=</span> <span class="mi">42</span><span class="o">;</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="n">publicField</span><span class="o">;</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="n">MyClass</span> <span class="n">sSingleton</span><span class="o">;</span>
@@ -216,28 +216,28 @@ If you can&#39;t find an answer in here, use your best judgement and keep things
 <p>Local variables should be declared at the point they are first used. Nearly every local variable declaration should contain an initializer. If you don&#39;t yet have enough information to initialize a variable sensibly, you should postpone the declaration until you do.</p>
 
 <p>One exception to this rule concerns try-catch statements. If a variable is initialized with the return value of a method that throws a checked exception, it must be initialized inside a try block. If the value must be used outside of the try block, then it must be declared before the try block, where it cannot yet be sensibly initialized:</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="c1">// Instantiate class cl, which represents some sort of Set </span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="c1">// Instantiate class cl, which represents some sort of Set </span>
 <span class="n">Set</span> <span class="n">s</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 <span class="k">try</span> <span class="o">{</span>
     <span class="n">s</span> <span class="o">=</span> <span class="o">(</span><span class="n">Set</span><span class="o">)</span> <span class="n">cl</span><span class="o">.</span><span class="na">newInstance</span><span class="o">();</span>
 <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">IllegalAccessException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span><span class="n">cl</span> <span class="o">+</span> <span class="s">&quot; not accessible&quot;</span><span class="o">);</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalArgumentException</span><span class="o">(</span><span class="n">cl</span> <span class="o">+</span> <span class="s">&quot; not accessible&quot;</span><span class="o">);</span>
 <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">InstantiationException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span><span class="n">cl</span> <span class="o">+</span> <span class="s">&quot; not instantiable&quot;</span><span class="o">);</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalArgumentException</span><span class="o">(</span><span class="n">cl</span> <span class="o">+</span> <span class="s">&quot; not instantiable&quot;</span><span class="o">);</span>
 <span class="o">}</span>
 
 <span class="c1">// Exercise the set </span>
 <span class="n">s</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">args</span><span class="o">));</span>
 </code></pre></div>
 <p>But even this case can be avoided by encapsulating the try-catch block in a method:</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="n">Set</span> <span class="nf">createSet</span><span class="o">(</span><span class="n">Class</span> <span class="n">cl</span><span class="o">)</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="n">Set</span> <span class="nf">createSet</span><span class="o">(</span><span class="n">Class</span> <span class="n">cl</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// Instantiate class cl, which represents some sort of Set </span>
     <span class="k">try</span> <span class="o">{</span>
         <span class="k">return</span> <span class="o">(</span><span class="n">Set</span><span class="o">)</span> <span class="n">cl</span><span class="o">.</span><span class="na">newInstance</span><span class="o">();</span>
     <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">IllegalAccessException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span><span class="n">cl</span> <span class="o">+</span> <span class="s">&quot; not accessible&quot;</span><span class="o">);</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalArgumentException</span><span class="o">(</span><span class="n">cl</span> <span class="o">+</span> <span class="s">&quot; not accessible&quot;</span><span class="o">);</span>
     <span class="o">}</span> <span class="k">catch</span><span class="o">(</span><span class="n">InstantiationException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span><span class="n">cl</span> <span class="o">+</span> <span class="s">&quot; not instantiable&quot;</span><span class="o">);</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="n">IllegalArgumentException</span><span class="o">(</span><span class="n">cl</span> <span class="o">+</span> <span class="s">&quot; not instantiable&quot;</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
 
@@ -248,19 +248,19 @@ If you can&#39;t find an answer in here, use your best judgement and keep things
 <span class="n">s</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span><span class="n">args</span><span class="o">));</span>
 </code></pre></div>
 <p>Loop variables should be declared in the for statement itself unless there is a compelling reason to do otherwise:</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
     <span class="n">doSomething</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
 <span class="o">}</span>
 </code></pre></div>
 <p>and</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="k">for</span> <span class="o">(</span><span class="n">Iterator</span> <span class="n">i</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span> <span class="n">i</span><span class="o">.</span><span class="na">hasNext</span><span class="o">();</span> <span class="o">)</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="k">for</span> <span class="o">(</span><span class="n">Iterator</span> <span class="n">i</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span> <span class="n">i</span><span class="o">.</span><span class="na">hasNext</span><span class="o">();</span> <span class="o">)</span> <span class="o">{</span>
     <span class="n">doSomethingElse</span><span class="o">(</span><span class="n">i</span><span class="o">.</span><span class="na">next</span><span class="o">());</span>
 <span class="o">}</span>
 </code></pre></div>
 <hr>
 <h3 id='use-standard-brace-style'><a class='reference' href='#use-standard-brace-style'><i class='icon-map-marker'></i></a>Use Standard Brace Style</h3>
 <p>Braces do not go on their own line; they go on the same line as the code before them. So:</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="kd">class</span> <span class="nc">MyClass</span> <span class="o">{</span>
     <span class="kt">int</span> <span class="nf">func</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">something</span><span class="o">)</span> <span class="o">{</span>
             <span class="c1">// ...</span>
@@ -273,15 +273,15 @@ If you can&#39;t find an answer in here, use your best judgement and keep things
 <span class="o">}</span>
 </code></pre></div>
 <p>We require braces around the statements for a conditional. Except, if the entire conditional (the condition and the body) fit on one line, you may (but are not obligated to) put it all on one line. That is, this is legal:</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="k">if</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="k">if</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">body</span><span class="o">();</span> 
 <span class="o">}</span>
 </code></pre></div>
 <p>and this is legal:</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="k">if</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="n">body</span><span class="o">();</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="k">if</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span> <span class="n">body</span><span class="o">();</span>
 </code></pre></div>
 <p>but this is still illegal:</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="k">if</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="k">if</span> <span class="o">(</span><span class="n">condition</span><span class="o">)</span>
     <span class="n">body</span><span class="o">();</span>  <span class="c1">// bad!</span>
 </code></pre></div>
 <hr>
@@ -333,10 +333,10 @@ If you can&#39;t find an answer in here, use your best judgement and keep things
 <p>Use TODO comments for code that is temporary, a short-term solution, or good-enough but not perfect.</p>
 
 <p>TODOs should include the string TODO in all caps, followed by a colon:</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="c1">// TODO: Remove this code after the UrlTable2 has been checked in.</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="c1">// TODO: Remove this code after the UrlTable2 has been checked in.</span>
 </code></pre></div>
 <p>and</p>
-<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="c1">// TODO: Change this to use a flag instead of a constant.</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span></span><span class="c1">// TODO: Change this to use a flag instead of a constant.</span>
 </code></pre></div>
 <p>If your TODO is of the form &quot;At a future date do something&quot; make sure that you either include a very specific date (&quot;Fix by November 2014&quot;) or a very specific event (&quot;Remove this code after tested on production&quot;).</p>
 <h3 id='use-spaces-for-indentation'><a class='reference' href='#use-spaces-for-indentation'><i class='icon-map-marker'></i></a>Use Spaces for Indentation</h3>
@@ -381,16 +381,16 @@ If you can&#39;t find an answer in here, use your best judgement and keep things
 </li><li id='strings_L2'><a class='reference' href='#strings_L2'><i class='icon-map-marker'></i></a><p>Place all strings that are not localizable in <code>strings_do_not_translate.xml</code>. These strings should also include the attribute <code>translatable=&quot;false&quot;</code></p>
 
 <p>eg:</p>
-<div class="highlight"><pre><code class="xml language-xml" data-lang="xml"><span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&quot;API_BASE_URL&quot;</span> <span class="na">translatable=</span><span class="s">&quot;false&quot;</span> <span class="na">tools:ignore=</span><span class="s">&quot;UnusedResources&quot;</span><span class="nt">&gt;</span>https://api.stage.com/<span class="nt">&lt;/string&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span></span><span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&quot;API_BASE_URL&quot;</span> <span class="na">translatable=</span><span class="s">&quot;false&quot;</span> <span class="na">tools:ignore=</span><span class="s">&quot;UnusedResources&quot;</span><span class="nt">&gt;</span>https://api.stage.com/<span class="nt">&lt;/string&gt;</span>
 </code></pre></div></li><li id='strings_L3'><a class='reference' href='#strings_L3'><i class='icon-map-marker'></i></a><p>Place all strings whose ids are verbatim of the string in <code>strings_verbatim.xml</code>. Always check to see if a verbatim string already exists before creating a new resource.</p>
 
 <p>eg:</p>
-<div class="highlight"><pre><code class="xml language-xml" data-lang="xml"><span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&quot;cancel&quot;</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/string&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span></span><span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&quot;cancel&quot;</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/string&gt;</span>
 <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&quot;edit&quot;</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/string&gt;</span>
 </code></pre></div></li><li id='strings_L4'><a class='reference' href='#strings_L4'><i class='icon-map-marker'></i></a><p>Use a comment to section out the <code>strings.xml</code> based on where they go in the app.</p>
 
 <p>eg:</p>
-<div class="highlight"><pre><code class="xml language-xml" data-lang="xml"> <span class="c">&lt;!-- Left Drawer --&gt;</span>
+<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span></span> <span class="c">&lt;!-- Left Drawer --&gt;</span>
 <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&quot;navigation_drawer_open&quot;</span><span class="nt">&gt;</span>Open navigation drawer<span class="nt">&lt;/string&gt;</span>
 <span class="nt">&lt;string</span> <span class="na">name=</span><span class="s">&quot;navigation_drawer_close&quot;</span><span class="nt">&gt;</span>Close navigation drawer<span class="nt">&lt;/string&gt;</span>
 </code></pre></div></li></ul>
@@ -407,6 +407,7 @@ If you can&#39;t find an answer in here, use your best judgement and keep things
     </div>
 
     
+
   </body>
 </html>
 

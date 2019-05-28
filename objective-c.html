@@ -16,9 +16,9 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link href="http://sportngin.github.io/styleguide/assets/themes/twitter/css/github.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="http://sportngin.github.io/styleguide/assets/themes//css/github.css?body=1" rel="stylesheet" type="text/css" media="all">
 
     <!-- Le fav and touch icons -->
   <!-- Update these with your own images
@@ -34,7 +34,7 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="container-narrow">
-          <a class="brand" href="http://sportngin.github.io/styleguide">Sport Ngin Style Guide</a>
+          <a class="brand" href="http://sportngin.github.io/styleguide">SportsEngine Style Guide</a>
           <ul class="nav">
             
             
@@ -45,7 +45,7 @@
     
       
       	
-      	<li><a href="http://sportngin.github.io/styleguide/android.html">Android</a></li>
+      	<li><a href="http://sportngin.github.io/styleguide/android">Android</a></li>
       	
       
     
@@ -53,35 +53,7 @@
     
       
       	
-      	<li><a href="http://sportngin.github.io/styleguide/angular.html">Angular</a></li>
-      	
-      
-    
-  
-    
-      
-    
-  
-    
-      
-      	
-      	<li><a href="http://sportngin.github.io/styleguide/javascript.html">JavaScript</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li class="active"><a href="http://sportngin.github.io/styleguide/objective-c.html" class="active">Objective-C</a></li>
-      	
-      
-    
-  
-    
-      
-      	
-      	<li><a href="http://sportngin.github.io/styleguide/ruby.html">Ruby</a></li>
+      	<li><a href="http://sportngin.github.io/styleguide/angular">Angular</a></li>
       	
       
     
@@ -93,7 +65,35 @@
     
       
       	
-      	<li><a href="http://sportngin.github.io/styleguide/swift.html">Swift</a></li>
+      	<li><a href="http://sportngin.github.io/styleguide/javascript">JavaScript</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li class="active"><a href="http://sportngin.github.io/styleguide/objective-c" class="active">Objective-C</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="http://sportngin.github.io/styleguide/ruby">Ruby</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="http://sportngin.github.io/styleguide/swift">Swift</a></li>
       	
       
     
@@ -148,16 +148,16 @@ Failing that, follow <a href="http://en.wikipedia.org/wiki/The_C_Programming_Lan
 <h2 id='organization'><a class='reference' href='#organization'><i class='icon-map-marker'></i></a>Organization</h2>
 <ul>
 <li id='organization_L1'><a class='reference' href='#organization_L1'><i class='icon-map-marker'></i></a><p>Use <code>#pragma mark</code>s to categorize methods into functional groupings and protocol implementations, following this general structure:</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="cp">#pragma mark - lifecycle</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="cp">#pragma mark - lifecycle</span>
 
-<span class="k">+</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nf">objectWithThing:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">thing</span>
+<span class="p">+</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nf">objectWithThing:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">thing</span>
 <span class="p">...</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nf">init</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nf">init</span>
 <span class="p">...</span>
 
 <span class="cp">#pragma mark - drawing</span>
 
-<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">drawRect:</span><span class="p">(</span><span class="n">CGRect</span><span class="p">)</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">drawRect:</span><span class="p">(</span><span class="bp">CGRect</span><span class="p">)</span>
 <span class="p">...</span>
 
 <span class="cp">#pragma mark - SuperclassName</span>
@@ -167,12 +167,12 @@ Failing that, follow <a href="http://en.wikipedia.org/wiki/The_C_Programming_Lan
 
 <span class="cp">#pragma mark - NSCopying</span>
 
-<span class="o">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="n">copyWithZone</span><span class="o">:</span><span class="p">(</span><span class="n">NSZone</span> <span class="o">*</span><span class="p">)</span><span class="n">zone</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nl">copyWithZone</span><span class="p">:(</span><span class="n">NSZone</span> <span class="o">*</span><span class="p">)</span><span class="n">zone</span>
 <span class="p">...</span>
 
 <span class="cp">#pragma mark - NSObject</span>
 
-<span class="o">-</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">description</span> <span class="p">{}</span>
+<span class="o">-</span> <span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">description</span> <span class="p">{}</span>
 <span class="p">...</span>
 </code></pre></div></li><li id='organization_L2'><a class='reference' href='#organization_L2'><i class='icon-map-marker'></i></a><p>There should be exactly one blank line between methods to aid in visual clarity and organization. Whitespace within methods should separate functionality, but often there should probably be new methods.</p>
 </li><li id='organization_L3'><a class='reference' href='#organization_L3'><i class='icon-map-marker'></i></a><p><code>@synthesize</code> and <code>@dynamic</code> should each be declared on new lines in the implementation.</p>
@@ -182,23 +182,23 @@ Failing that, follow <a href="http://en.wikipedia.org/wiki/The_C_Programming_Lan
 <li id='spacing_L1'><a class='reference' href='#spacing_L1'><i class='icon-map-marker'></i></a>Indent using 4 spaces. Do not indent with tabs. Be sure to set this preference in Xcode.
 </li><li id='spacing_L2'><a class='reference' href='#spacing_L2'><i class='icon-map-marker'></i></a>Never use spaces between parentheses and their contents.
 </li><li id='spacing_L3'><a class='reference' href='#spacing_L3'><i class='icon-map-marker'></i></a><p>Asterisks indicating pointers belong with the variable. They should have one space to their left and none to their right.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="c1">// bad</span>
-<span class="k">+</span> <span class="p">(</span><span class="n">NSString</span><span class="o">*</span><span class="p">)</span><span class="nf">aStringMethod:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span> <span class="p">)</span><span class="nv">inputString</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// bad</span>
+<span class="p">+</span> <span class="p">(</span><span class="bp">NSString</span><span class="o">*</span><span class="p">)</span><span class="nf">aStringMethod:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span> <span class="p">)</span><span class="nv">inputString</span>
 <span class="p">{</span>
-    <span class="n">NSString</span><span class="o">*</span><span class="n">temporaryStringOne</span><span class="p">;</span>
-    <span class="n">NSString</span><span class="o">*</span> <span class="n">temporaryStringTwo</span><span class="p">;</span>
-    <span class="n">NSString</span> <span class="o">*</span> <span class="n">temporaryStringThree</span><span class="p">;</span>
+    <span class="bp">NSString</span><span class="o">*</span><span class="n">temporaryStringOne</span><span class="p">;</span>
+    <span class="bp">NSString</span><span class="o">*</span> <span class="n">temporaryStringTwo</span><span class="p">;</span>
+    <span class="bp">NSString</span> <span class="o">*</span> <span class="n">temporaryStringThree</span><span class="p">;</span>
     <span class="p">...</span>
 
 <span class="c1">// good</span>
-<span class="o">+</span> <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">aStringMethod</span><span class="o">:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">inputString</span>
+<span class="o">+</span> <span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nl">aStringMethod</span><span class="p">:(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">inputString</span>
 <span class="p">{</span>
-    <span class="n">NSString</span> <span class="o">*</span><span class="n">temporaryStringOne</span><span class="p">;</span>
-    <span class="n">NSString</span> <span class="o">*</span><span class="n">temporaryStringTwo</span><span class="p">;</span>
-    <span class="n">NSString</span> <span class="o">*</span><span class="n">temporaryStringThree</span><span class="p">;</span>
+    <span class="bp">NSString</span> <span class="o">*</span><span class="n">temporaryStringOne</span><span class="p">;</span>
+    <span class="bp">NSString</span> <span class="o">*</span><span class="n">temporaryStringTwo</span><span class="p">;</span>
+    <span class="bp">NSString</span> <span class="o">*</span><span class="n">temporaryStringThree</span><span class="p">;</span>
     <span class="p">...</span>
 </code></pre></div></li><li id='spacing_L4'><a class='reference' href='#spacing_L4'><i class='icon-map-marker'></i></a><p>Separate binary operands with a single space, but unary operands and casts with none.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="c1">// bad</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// bad</span>
 <span class="n">NewType</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">NewType</span><span class="p">)</span> <span class="n">b</span><span class="p">;</span>
 
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span> <span class="p">{</span>
@@ -212,20 +212,20 @@ Failing that, follow <a href="http://en.wikipedia.org/wiki/The_C_Programming_Lan
     <span class="n">doCoolThings</span><span class="p">();</span>
 <span class="p">}</span>
 </code></pre></div></li><li id='spacing_L5'><a class='reference' href='#spacing_L5'><i class='icon-map-marker'></i></a><p>Method signatures require a space between the scope (<code>+</code>/<code>-</code>) indicator and the return type. Each method segment should be on its own line, with the colons aligned vertically. Both braces surrounding the method&#39;s implementation occupy their own lines.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="c1">// bad</span>
-<span class="k">-</span><span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">methodThatTakesAString:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">string</span> <span class="nf">andAnInteger:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">integer</span><span class="p">{</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// bad</span>
+<span class="p">-(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">methodThatTakesAString:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">string</span> <span class="nf">andAnInteger:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">integer</span><span class="p">{</span>
     <span class="c1">// implementation</span>
     <span class="k">return</span> <span class="n">answer</span><span class="p">;}</span>
 
 <span class="c1">// good</span>
-<span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">methodThatTakesAString:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">string</span>
-                  <span class="nl">andAnInteger:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">integer</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">methodThatTakesAString:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">string</span>
+                  <span class="nf">andAnInteger:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">integer</span>
 <span class="p">{</span>
     <span class="c1">// implementation</span>
     <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></li><li id='spacing_L6'><a class='reference' href='#spacing_L6'><i class='icon-map-marker'></i></a><p>Other braces (<code>if</code>/<code>else</code>/<code>switch</code>/<code>while</code> etc.) always open on the same line as the statement (preceded by a space) but close on a new line. <code>else</code> occupies the same line as the <code>if</code>&#39;s closing brace.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="c1">// bad</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// bad</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">user</span><span class="p">.</span><span class="n">isHappy</span><span class="p">){</span>
     <span class="p">...</span>
 <span class="p">}</span>
@@ -251,19 +251,19 @@ Failing that, follow <a href="http://en.wikipedia.org/wiki/The_C_Programming_Lan
 <h2 id='syntax-choices'><a class='reference' href='#syntax-choices'><i class='icon-map-marker'></i></a>Syntax Choices</h2>
 <ul>
 <li id='syntax-choices_L1'><a class='reference' href='#syntax-choices_L1'><i class='icon-map-marker'></i></a><p>Dot-notation should always be used for accessing and mutating properties. Bracket notation is preferred in all other instances.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="c1">// bad</span>
-<span class="p">[</span><span class="n">view</span> <span class="n">setBackgroundColor</span><span class="o">:</span><span class="p">[</span><span class="n">UIColor</span> <span class="n">orangeColor</span><span class="p">]];</span>
-<span class="n">UIApplication</span><span class="p">.</span><span class="n">sharedApplication</span><span class="p">.</span><span class="n">delegate</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// bad</span>
+<span class="p">[</span><span class="n">view</span> <span class="nl">setBackgroundColor</span><span class="p">:[</span><span class="bp">UIColor</span> <span class="n">orangeColor</span><span class="p">]];</span>
+<span class="bp">UIApplication</span><span class="p">.</span><span class="n">sharedApplication</span><span class="p">.</span><span class="n">delegate</span><span class="p">;</span>
 
 <span class="c1">// good</span>
-<span class="n">view</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIColor</span> <span class="n">orangeColor</span><span class="p">];</span>
-<span class="p">[</span><span class="n">UIApplication</span> <span class="n">sharedApplication</span><span class="p">].</span><span class="n">delegate</span><span class="p">;</span>
+<span class="n">view</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[</span><span class="bp">UIColor</span> <span class="n">orangeColor</span><span class="p">];</span>
+<span class="p">[</span><span class="bp">UIApplication</span> <span class="n">sharedApplication</span><span class="p">].</span><span class="n">delegate</span><span class="p">;</span>
 </code></pre></div></li><li id='syntax-choices_L2'><a class='reference' href='#syntax-choices_L2'><i class='icon-map-marker'></i></a><p>When using properties, instance variables should always be accessed and mutated using <code>self.</code>. This means that all properties will be visually distinct, as they will all be prefaced with <code>self.</code>. Local variables should not begin with underscores.</p>
 </li></ul>
 <h2 id='conditionals'><a class='reference' href='#conditionals'><i class='icon-map-marker'></i></a>Conditionals</h2>
 <ul>
 <li id='conditionals_L1'><a class='reference' href='#conditionals_L1'><i class='icon-map-marker'></i></a><p>Conditional bodies should always use braces even when the body is written on a single line. (See <a href="https://github.com/NYTimes/objective-c-style-guide/blob/master/README.md#conditionals">the NYT guide</a> for examples of errors that can result from violating this.)</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="c1">// bad</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// bad</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">error</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">success</span><span class="p">;</span>
 
@@ -278,25 +278,25 @@ Failing that, follow <a href="http://en.wikipedia.org/wiki/The_C_Programming_Lan
 <span class="c1">// also good</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">success</span><span class="p">;</span> <span class="p">}</span>
 </code></pre></div></li><li id='conditionals_L2'><a class='reference' href='#conditionals_L2'><i class='icon-map-marker'></i></a><p>The ternary operator <code>?</code> should only be used when it increases clarity or code neatness. A single condition is usually all that should be evaluated. Evaluating multiple conditions is usually more understandable as an if statement, or refactored into instance variables. The condition of a ternary expression should be enclosed in parentheses for clarity.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="c1">// bad</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">x</span> <span class="o">=</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="n">d</span> <span class="o">?</span> <span class="n">c</span> <span class="o">:</span> <span class="n">d</span> <span class="o">:</span> <span class="n">y</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// bad</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">x</span> <span class="o">=</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="n">d</span> <span class="o">?</span> <span class="nl">c</span> <span class="p">:</span> <span class="nl">d</span> <span class="p">:</span> <span class="n">y</span><span class="p">;</span>
 
 <span class="c1">// good</span>
-<span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">?</span> <span class="n">x</span> <span class="o">:</span> <span class="n">y</span><span class="p">;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">?</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">y</span><span class="p">;</span>
 </code></pre></div></li></ul>
 <h2 id='variables'><a class='reference' href='#variables'><i class='icon-map-marker'></i></a>Variables</h2>
 <ul>
 <li id='variables_L1'><a class='reference' href='#variables_L1'><i class='icon-map-marker'></i></a><p>Property definitions should be used in place of naked instance variables whenever possible. Direct instance variable access should be avoided except in initializer methods (<code>init</code>, <code>initWithCoder:</code>, etc.), <code>dealloc</code> methods and within custom setters and getters.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="c1">// bad</span>
-<span class="k">@interface</span> <span class="nc">someClass</span> : <span class="nc">NSObject</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// bad</span>
+<span class="k">@interface</span> <span class="nc">someClass</span> : <span class="bp">NSObject</span>
 <span class="p">{</span>
-    <span class="n">NSString</span> <span class="o">*</span><span class="n">_label</span><span class="p">;</span>
+    <span class="bp">NSString</span> <span class="o">*</span><span class="n">_label</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// good</span>
-<span class="k">@interface</span> <span class="nc">someClass</span> : <span class="nc">NSObject</span>
+<span class="k">@interface</span> <span class="nc">someClass</span> : <span class="bp">NSObject</span>
 
-<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">label</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="k">nonatomic</span><span class="p">)</span> <span class="bp">NSString</span> <span class="o">*</span><span class="n">label</span><span class="p">;</span>
 
 <span class="k">@end</span>
 </code></pre></div></li></ul>
@@ -319,54 +319,54 @@ Failing that, follow <a href="http://en.wikipedia.org/wiki/The_C_Programming_Lan
 </li><li id='literals_L2'><a class='reference' href='#literals_L2'><i class='icon-map-marker'></i></a>Spaces belong between the braces of array and dictionary literals and their contents; between each member of the collection; and between keys, colons, and values of a dictionary literal.
 </li><li id='literals_L3'><a class='reference' href='#literals_L3'><i class='icon-map-marker'></i></a>Spaces belong between the braces of a subscripted array and the index when the index is a variable.
 </li><li id='literals_L4'><a class='reference' href='#literals_L4'><i class='icon-map-marker'></i></a><p>Long or complex array and dictionary literals may be broken into several lines.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="c1">// bad</span>
-<span class="n">NSString</span> <span class="o">*</span><span class="n">greeting</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="n">stringWithUTF8String</span><span class="o">:</span><span class="s">&quot;hello&quot;</span><span class="p">];</span>
-<span class="n">NSArray</span> <span class="o">*</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSArray</span> <span class="n">arrayWithObjects</span><span class="o">:</span><span class="s">@&quot;Joe&quot;</span><span class="p">,</span> <span class="s">@&quot;Mark&quot;</span><span class="p">,</span> <span class="s">@&quot;Michael&quot;</span><span class="p">,</span> <span class="s">@&quot;Mike&quot;</span><span class="p">,</span> <span class="s">@&quot;Shivani&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">];</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// bad</span>
+<span class="bp">NSString</span> <span class="o">*</span><span class="n">greeting</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSString</span> <span class="nl">stringWithUTF8String</span><span class="p">:</span><span class="s">&quot;hello&quot;</span><span class="p">];</span>
+<span class="bp">NSArray</span> <span class="o">*</span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSArray</span> <span class="nl">arrayWithObjects</span><span class="p">:</span><span class="s">@&quot;Joe&quot;</span><span class="p">,</span> <span class="s">@&quot;Mark&quot;</span><span class="p">,</span> <span class="s">@&quot;Michael&quot;</span><span class="p">,</span> <span class="s">@&quot;Mike&quot;</span><span class="p">,</span> <span class="s">@&quot;Shivani&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">];</span>
 <span class="n">NSInteger</span> <span class="n">indexOfShivani</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
-<span class="n">NSString</span> <span class="o">*</span><span class="n">shivani</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="n">indexOfShivani</span><span class="p">];</span>
-<span class="n">NSDictionary</span> <span class="o">*</span><span class="n">appOwners</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSDictionary</span> <span class="n">dictionaryWithObjectsAndKeys</span><span class="o">:</span> <span class="s">@&quot;Mike&quot;</span><span class="p">,</span> <span class="s">@&quot;iScout&quot;</span><span class="p">,</span> <span class="s">@&quot;Michael&quot;</span><span class="p">,</span> <span class="s">@&quot;Scorekeeper&quot;</span><span class="p">,</span> <span class="s">@&quot;Mark&quot;</span><span class="p">,</span> <span class="s">@&quot;Tournament&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">];</span>
-<span class="n">NSNumber</span> <span class="o">*</span><span class="n">shouldUseLiterals</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSNumber</span> <span class="n">numberWithBool</span><span class="o">:</span><span class="nb">YES</span><span class="p">];</span>
-<span class="n">NSNumber</span> <span class="o">*</span><span class="n">buildingZIPCode</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSNumber</span> <span class="n">numberWithInteger</span><span class="o">:</span><span class="mi">55413</span><span class="p">];</span>
+<span class="bp">NSString</span> <span class="o">*</span><span class="n">shivani</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="n">indexOfShivani</span><span class="p">];</span>
+<span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">appOwners</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSDictionary</span> <span class="nl">dictionaryWithObjectsAndKeys</span><span class="p">:</span> <span class="s">@&quot;Mike&quot;</span><span class="p">,</span> <span class="s">@&quot;iScout&quot;</span><span class="p">,</span> <span class="s">@&quot;Michael&quot;</span><span class="p">,</span> <span class="s">@&quot;Scorekeeper&quot;</span><span class="p">,</span> <span class="s">@&quot;Mark&quot;</span><span class="p">,</span> <span class="s">@&quot;Tournament&quot;</span><span class="p">,</span> <span class="nb">nil</span><span class="p">];</span>
+<span class="bp">NSNumber</span> <span class="o">*</span><span class="n">shouldUseLiterals</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSNumber</span> <span class="nl">numberWithBool</span><span class="p">:</span><span class="nb">YES</span><span class="p">];</span>
+<span class="bp">NSNumber</span> <span class="o">*</span><span class="n">buildingZIPCode</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSNumber</span> <span class="nl">numberWithInteger</span><span class="p">:</span><span class="mi">55413</span><span class="p">];</span>
 
 <span class="c1">// good</span>
-<span class="n">NSString</span> <span class="o">*</span><span class="n">greeting</span> <span class="o">=</span> <span class="s">@&quot;Hello&quot;</span><span class="p">;</span>
-<span class="n">NSArray</span> <span class="o">*</span><span class="n">names</span> <span class="o">=</span> <span class="err">@</span><span class="p">[</span> <span class="s">@&quot;Joe&quot;</span><span class="p">,</span> <span class="s">@&quot;Mark&quot;</span><span class="p">,</span> <span class="s">@&quot;Michael&quot;</span><span class="p">,</span> <span class="s">@&quot;Mike&quot;</span><span class="p">,</span> <span class="s">@&quot;Shivani&quot;</span> <span class="p">];</span>
+<span class="bp">NSString</span> <span class="o">*</span><span class="n">greeting</span> <span class="o">=</span> <span class="s">@&quot;Hello&quot;</span><span class="p">;</span>
+<span class="bp">NSArray</span> <span class="o">*</span><span class="n">names</span> <span class="o">=</span> <span class="l">@[</span> <span class="s">@&quot;Joe&quot;</span><span class="p">,</span> <span class="s">@&quot;Mark&quot;</span><span class="p">,</span> <span class="s">@&quot;Michael&quot;</span><span class="p">,</span> <span class="s">@&quot;Mike&quot;</span><span class="p">,</span> <span class="s">@&quot;Shivani&quot;</span> <span class="l">]</span><span class="p">;</span>
 <span class="n">NSInteger</span> <span class="n">indexOfShivani</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
-<span class="n">NSString</span> <span class="o">*</span><span class="n">shivani</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span> <span class="n">indexOfShivani</span> <span class="p">];</span>
-<span class="n">NSDictionary</span> <span class="o">*</span><span class="n">productManagers</span> <span class="o">=</span> <span class="err">@</span><span class="p">{</span> <span class="s">@&quot;iScout&quot;</span> <span class="o">:</span> <span class="s">@&quot;Mike&quot;</span><span class="p">,</span>
+<span class="bp">NSString</span> <span class="o">*</span><span class="n">shivani</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span> <span class="n">indexOfShivani</span> <span class="p">];</span>
+<span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">productManagers</span> <span class="o">=</span> <span class="l">@{</span> <span class="s">@&quot;iScout&quot;</span> <span class="o">:</span> <span class="s">@&quot;Mike&quot;</span><span class="p">,</span>
                                    <span class="s">@&quot;Scorekeeper&quot;</span> <span class="o">:</span> <span class="s">@&quot;Michael&quot;</span><span class="p">,</span>
-                                   <span class="s">@&quot;Tournament&quot;</span> <span class="o">:</span> <span class="s">@&quot;Mark&quot;</span> <span class="p">};</span>
-<span class="n">NSNumber</span> <span class="o">*</span><span class="n">shouldUseLiterals</span> <span class="o">=</span> <span class="err">@</span><span class="nb">YES</span><span class="p">;</span>
-<span class="n">NSNumber</span> <span class="o">*</span><span class="n">buildingZIPCode</span> <span class="o">=</span> <span class="mi">@10018</span><span class="p">;</span>
+                                   <span class="s">@&quot;Tournament&quot;</span> <span class="o">:</span> <span class="s">@&quot;Mark&quot;</span> <span class="l">}</span><span class="p">;</span>
+<span class="bp">NSNumber</span> <span class="o">*</span><span class="n">shouldUseLiterals</span> <span class="o">=</span> <span class="m">@YES</span><span class="p">;</span>
+<span class="bp">NSNumber</span> <span class="o">*</span><span class="n">buildingZIPCode</span> <span class="o">=</span> <span class="mi">@10018</span><span class="p">;</span>
 </code></pre></div></li></ul>
 <h2 id='constants'><a class='reference' href='#constants'><i class='icon-map-marker'></i></a>Constants</h2>
 <ul>
 <li id='constants_L1'><a class='reference' href='#constants_L1'><i class='icon-map-marker'></i></a><p>Constants are preferred over in-line string literals or numbers. Constants should be declared as <code>static const</code> variables and not <code>#define</code>s unless explicitly being used as a macro.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="c1">// bad</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// bad</span>
 <span class="cp">#define COMPANY_NAME @&quot;Sport Ngin&quot;</span>
 <span class="p">...</span>
-<span class="p">[</span><span class="n">SNSyncTimer</span> <span class="n">timerWithInterval</span><span class="o">:</span><span class="mi">10</span>
-                   <span class="nl">maxInterval:</span><span class="mi">900</span>
-                      <span class="nl">hostname:</span><span class="s">@&quot;api.host.com&quot;</span>
-                       <span class="nl">handler:</span><span class="o">^</span><span class="p">{</span> <span class="p">[</span><span class="n">self</span> <span class="n">pull</span><span class="p">];</span> <span class="p">}];</span>
+<span class="p">[</span><span class="n">SNSyncTimer</span> <span class="nl">timerWithInterval</span><span class="p">:</span><span class="mi">10</span>
+                   <span class="nl">maxInterval</span><span class="p">:</span><span class="mi">900</span>
+                      <span class="nl">hostname</span><span class="p">:</span><span class="s">@&quot;api.host.com&quot;</span>
+                       <span class="nl">handler</span><span class="p">:</span><span class="o">^</span><span class="p">{</span> <span class="p">[</span><span class="nb">self</span> <span class="n">pull</span><span class="p">];</span> <span class="p">}];</span>
 
 <span class="c1">// good</span>
-<span class="k">static</span> <span class="n">NSString</span> <span class="o">*</span> <span class="k">const</span> <span class="n">CompanyName</span> <span class="o">=</span> <span class="s">@&quot;Sport Ngin&quot;</span><span class="p">;</span>
+<span class="k">static</span> <span class="bp">NSString</span> <span class="o">*</span> <span class="k">const</span> <span class="n">CompanyName</span> <span class="o">=</span> <span class="s">@&quot;Sport Ngin&quot;</span><span class="p">;</span>
 <span class="p">...</span>
 <span class="k">static</span> <span class="n">NSInteger</span> <span class="k">const</span> <span class="n">TimerInterval</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="k">static</span> <span class="n">NSInteger</span> <span class="k">const</span> <span class="n">MaxInterval</span> <span class="o">=</span> <span class="mi">900</span><span class="p">;</span>
-<span class="k">static</span> <span class="n">NSString</span> <span class="o">*</span> <span class="k">const</span> <span class="n">APIHostName</span> <span class="o">=</span> <span class="s">@&quot;api.host.com&quot;</span><span class="p">;</span>
+<span class="k">static</span> <span class="bp">NSString</span> <span class="o">*</span> <span class="k">const</span> <span class="n">APIHostName</span> <span class="o">=</span> <span class="s">@&quot;api.host.com&quot;</span><span class="p">;</span>
 <span class="p">...</span>
-<span class="p">[</span><span class="n">SNSyncTimer</span> <span class="n">timerWithInterval</span><span class="o">:</span><span class="n">TimerInterval</span>
-                   <span class="nl">maxInterval:</span><span class="n">MaxInterval</span>
-                      <span class="nl">hostname:</span><span class="n">APIHostName</span>
-                       <span class="nl">handler:</span><span class="o">^</span><span class="p">{</span> <span class="p">[</span><span class="n">self</span> <span class="n">pull</span><span class="p">];</span> <span class="p">}];</span>
+<span class="p">[</span><span class="n">SNSyncTimer</span> <span class="nl">timerWithInterval</span><span class="p">:</span><span class="n">TimerInterval</span>
+                   <span class="nl">maxInterval</span><span class="p">:</span><span class="n">MaxInterval</span>
+                      <span class="nl">hostname</span><span class="p">:</span><span class="n">APIHostName</span>
+                       <span class="nl">handler</span><span class="p">:</span><span class="o">^</span><span class="p">{</span> <span class="p">[</span><span class="nb">self</span> <span class="n">pull</span><span class="p">];</span> <span class="p">}];</span>
 </code></pre></div></li></ul>
 <h2 id='booleans'><a class='reference' href='#booleans'><i class='icon-map-marker'></i></a>Booleans</h2>
 <ul>
 <li id='booleans_L1'><a class='reference' href='#booleans_L1'><i class='icon-map-marker'></i></a>Use the full-caps <code>BOOL</code> to indicate boolean types.
 </li><li id='booleans_L2'><a class='reference' href='#booleans_L2'><i class='icon-map-marker'></i></a><p>Since <code>nil</code> resolves to <code>NO</code> it is unnecessary to compare it in conditions. Never compare something directly to <code>YES</code>, because <code>YES</code> is defined to 1 and a <code>BOOL</code> can be up to 8 bits.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="c1">// bad</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="c1">// bad</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">someObject</span> <span class="o">==</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">...</span>
 <span class="k">if</span> <span class="p">([</span><span class="n">someObject</span> <span class="n">boolValue</span><span class="p">]</span> <span class="o">==</span> <span class="nb">NO</span><span class="p">)</span> <span class="p">...</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">isAwesome</span> <span class="o">==</span> <span class="nb">YES</span><span class="p">)</span> <span class="p">...</span>
@@ -376,14 +376,14 @@ Failing that, follow <a href="http://en.wikipedia.org/wiki/The_C_Programming_Lan
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="n">someObject</span> <span class="n">boolValue</span><span class="p">])</span> <span class="p">...</span>
 <span class="k">if</span> <span class="p">(</span><span class="n">isAwesome</span><span class="p">)</span> <span class="p">...</span>
 </code></pre></div></li><li id='booleans_L3'><a class='reference' href='#booleans_L3'><i class='icon-map-marker'></i></a><p>If the name of a <code>BOOL</code> property is expressed as an adjective, the property can omit the “is” prefix but specifies the conventional name for the get accessor.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isEditable</span><span class="p">)</span> <span class="kt">BOOL</span> <span class="n">editable</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="k">@property</span> <span class="p">(</span><span class="k">assign</span><span class="p">,</span> <span class="k">getter</span><span class="o">=</span><span class="n">isEditable</span><span class="p">)</span> <span class="kt">BOOL</span> <span class="n">editable</span><span class="p">;</span>
 </code></pre></div></li></ul>
 <h2 id='enumerated-types'><a class='reference' href='#enumerated-types'><i class='icon-map-marker'></i></a>Enumerated Types</h2>
 <ul>
 <li id='enumerated-types_L1'><a class='reference' href='#enumerated-types_L1'><i class='icon-map-marker'></i></a>Use the <code>NS_ENUM()</code> macro to define <code>enum</code>s.
 </li><li id='enumerated-types_L2'><a class='reference' href='#enumerated-types_L2'><i class='icon-map-marker'></i></a>Each enumerated value should begin with the type name.
 </li><li id='enumerated-types_L3'><a class='reference' href='#enumerated-types_L3'><i class='icon-map-marker'></i></a><p>The first value should be 1, unless it represents some sort of &quot;false&quot; state, or if the values represent array indexes, in which case 0 is appropriate.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="k">typedef</span> <span class="nf">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">PeriodType</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="k">typedef</span> <span class="nf">NS_ENUM</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">,</span> <span class="n">PeriodType</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">PeriodTypeWarmup</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
     <span class="n">PeriodTypeNormal</span><span class="p">,</span>
     <span class="n">PeriodTypeIntermission</span><span class="p">,</span>
@@ -395,21 +395,21 @@ Failing that, follow <a href="http://en.wikipedia.org/wiki/The_C_Programming_Lan
 <h2 id='common-method-structures'><a class='reference' href='#common-method-structures'><i class='icon-map-marker'></i></a>Common Method Structures</h2>
 <ul>
 <li id='common-method-structures_L1'><a class='reference' href='#common-method-structures_L1'><i class='icon-map-marker'></i></a><p><code>init</code> methods should be structured like this:</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">init</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">instancetype</span><span class="p">)</span><span class="nf">init</span>
 <span class="p">{</span>
-    <span class="n">self</span> <span class="o">=</span> <span class="p">[</span><span class="n">super</span> <span class="n">init</span><span class="p">];</span> <span class="c1">// or call the designated initalizer</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">self</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">self</span> <span class="o">=</span> <span class="p">[</span><span class="nb">super</span> <span class="n">init</span><span class="p">];</span> <span class="c1">// or call the designated initalizer</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">self</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// custom initialization</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">self</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nb">self</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></li><li id='common-method-structures_L2'><a class='reference' href='#common-method-structures_L2'><i class='icon-map-marker'></i></a><p>Singleton objects should use a thread-safe pattern for creating their shared instance.</p>
-<div class="highlight"><pre><code class="objc language-objc" data-lang="objc"><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">sharedInstance</span>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">instancetype</span><span class="p">)</span><span class="nf">sharedInstance</span>
 <span class="p">{</span>
     <span class="k">static</span> <span class="kt">id</span> <span class="n">__sharedInstance</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
-    <span class="k">static</span> <span class="kt">dispatch_once_t</span> <span class="n">onceToken</span><span class="p">;</span>
+    <span class="k">static</span> <span class="n">dispatch_once_t</span> <span class="n">onceToken</span><span class="p">;</span>
     <span class="n">dispatch_once</span><span class="p">(</span><span class="o">&amp;</span><span class="n">onceToken</span><span class="p">,</span> <span class="o">^</span><span class="p">{</span>
-        <span class="n">__sharedInstance</span> <span class="o">=</span> <span class="p">[[</span><span class="n">self</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>  <span class="c1">// or call custom designated initializer</span>
+        <span class="n">__sharedInstance</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">self</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>  <span class="c1">// or call custom designated initializer</span>
     <span class="p">});</span>
     <span class="k">return</span> <span class="n">__sharedInstance</span><span class="p">;</span>
 <span class="p">}</span>
@@ -493,6 +493,7 @@ Failing that, follow <a href="http://en.wikipedia.org/wiki/The_C_Programming_Lan
     </div>
 
     
+
   </body>
 </html>
 
