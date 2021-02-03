@@ -1439,14 +1439,14 @@ Apply this rule only to arrays with two or more elements.
     email_with_name = "#{user.name} <#{user.email}>"
     ```
 
-* Prefer double-quoted strings. Interpolation and escaped characters will always work without a delimiter change, and ' is a lot more common than " in string literals.
+* Prefer single-quoted strings.
 
     ```ruby
     # bad
-    name = 'Bozhidar'
+    name = "Bozhidar"
 
     # good
-    name = "Bozhidar"
+    name = 'Bozhidar'
     ```
 
 * Don't leave out `{}` around instance and global variables being
