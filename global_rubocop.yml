@@ -1,41 +1,29 @@
-Metrics/ClassLength:
-  Enabled: false
-
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
   Exclude:
     - 'spec/**/*'
 
-Metrics/MethodLength:
-  Max: 25
-
-Metrics/CyclomaticComplexity:
-  Max: 10
-
-Style/Documentation:
-  Enabled: false
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
 
 Metrics/AbcSize:
   Max: 50
 
-Style/Alias:
-  EnforcedStyle: prefer_alias_method
-
-Metrics/ModuleLength:
-  Max: 200
-
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
-Layout/MultilineOperationIndentation:
-  EnforcedStyle: indented
-
-Style/AccessModifierDeclarations:
-  EnforcedStyle: inline
-
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/MethodLength:
+  Max: 25
+
+Metrics/ModuleLength:
+  Max: 200
 
 Rails/UnknownEnv:
   Environments:
@@ -43,3 +31,18 @@ Rails/UnknownEnv:
     - test
     - production
     - staging
+
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline
+
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
+Style/Documentation:
+  Enabled: false
+
+Style/FormatStringToken:
+  EnforcedStyle: template
+
+Style/FrozenStringLiteralComment:
+  Enabled: false

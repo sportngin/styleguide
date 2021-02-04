@@ -1223,12 +1223,12 @@ Apply this rule only to arrays with two or more elements.</p>
 
 <span class="c1"># good</span>
 <span class="n">email_with_name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> &lt;</span><span class="si">#{</span><span class="n">user</span><span class="o">.</span><span class="n">email</span><span class="si">}</span><span class="s2">&gt;&quot;</span>
-</code></pre></div></li><li id='strings_L2'><a class='reference' href='#strings_L2'><i class='icon-map-marker'></i></a><p>Prefer double-quoted strings. Interpolation and escaped characters will always work without a delimiter change, and &#39; is a lot more common than &quot; in string literals.</p>
+</code></pre></div></li><li id='strings_L2'><a class='reference' href='#strings_L2'><i class='icon-map-marker'></i></a><p>Prefer single-quoted strings.</p>
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="c1"># bad</span>
-<span class="nb">name</span> <span class="o">=</span> <span class="s1">&#39;Bozhidar&#39;</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="s2">&quot;Bozhidar&quot;</span>
 
 <span class="c1"># good</span>
-<span class="nb">name</span> <span class="o">=</span> <span class="s2">&quot;Bozhidar&quot;</span>
+<span class="nb">name</span> <span class="o">=</span> <span class="s1">&#39;Bozhidar&#39;</span>
 </code></pre></div></li><li id='strings_L3'><a class='reference' href='#strings_L3'><i class='icon-map-marker'></i></a><p>Don&#39;t leave out <code>{}</code> around instance and global variables being
 interpolated into a string.</p>
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span></span><span class="k">class</span> <span class="nc">Person</span>
