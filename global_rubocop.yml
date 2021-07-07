@@ -6,6 +6,9 @@ Layout/LineLength:
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
 Metrics/AbcSize:
   Max: 50
 
